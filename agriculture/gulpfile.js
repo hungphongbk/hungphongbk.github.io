@@ -7,8 +7,8 @@ var conf={
 };
 
 g.task('clean',function(){
-    return g.src(conf.dest,{read:false})
-        .pipe(pl.clean());
+    return g.src(conf.dest+'**/*',{read:false})
+        .pipe(pl.rimraf());
 });
 g.task('css', function(){
 	g.src(conf.src+'css/**/*.css')
@@ -26,5 +26,12 @@ g.task('js', function(){
 		.pipe(pl.rename('app.min.js'))
 		.pipe(g.dest(conf.dest+'js'));
 });
+g.task('templates', function(){
+	g.src(conf.src+'templates/**/*.html')
+		.pipe(pl.angularTemplatecache({module:'Agriculture', standalone: false}))
+		.pipe(pl.uglify())
+		.pipe(pl.rename('templates.min.js'))
+		.pipe(g.dest(conf.dest+'js'));
+});
 
-g.task('default',['clean','css','js']);
+g.task('default',['clean','css','templates','js']);

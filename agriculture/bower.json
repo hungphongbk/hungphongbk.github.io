@@ -25,6 +25,7 @@
     "angular": "angularjs#~1.4.7"
   },
   "devDependencies": {
-    "font-awesome": "~4.4.0"
+    "font-awesome": "~4.4.0",
+    "angular-ui-router": "~0.2.15"
   }
 }

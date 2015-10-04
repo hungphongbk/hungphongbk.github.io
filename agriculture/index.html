@@ -10,7 +10,9 @@
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script type="text/javascript" src="dist/js/app.min.js"></script>
+	<script type="text/javascript" src="dist/js/templates.min.js"></script>
 </head>
 <body ng-app="Agriculture">
 	<nav id="navBar" class="navbar navbar-fixed-top">
@@ -22,15 +24,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">AgriEncourage</a>
+				<a class="navbar-brand" href="#/">AgriEncourage</a>
 			</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="#">Trang chủ</a></li>
-				<li><a href="#">Thông tin chi tiết</a></li>
-				<li><a href="#">Tin tức</a></li>
-				<li><a href="#">Thống kê</a></li>
-				<li><a href="#">Diễn đàn</a></li>
+				<li><a href="#/">Trang chủ</a></li>
+				<li><a href="#/">Thông tin chi tiết</a></li>
+				<li><a href="#/">Tin tức</a></li>
+				<li><a href="#/">Thống kê</a></li>
+				<li><a href="#/">Diễn đàn</a></li>
 			</ul>
 			<form class="navbar-form navbar-right">
             	<input type="text" class="form-control" placeholder="Tìm kiếm...">
@@ -61,79 +63,8 @@
     				Phòng máy tính A5, 268 đường Lý Thường Kiệt, phường 14, quận 10, TPHCM<br />
     			</p>
     		</div>
-    		<div class="col-md-7 col-md-offset-2">
-    			<br />
-    			<div class="panel panel-default">
-    				<div class="panel-heading text-uppercase clearfix">
-    					<strong class="text-primary">tin tức sự kiện</strong>
-    					<a class="btn btn-primary btn-xs pull-right" href="#">Xem thêm</a>
-					</div>
-    				<div class="panel-body">
-    					<div class="row">
-    						<div class="col-md-6">
-    							<div class="media">
-    								<div class="media-left">
-    									<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTAyZWUxNzJhYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MDJlZTE3MmFiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy40Njg3NSIgeT0iMzYuNSI+NjR4NjQ8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" alt="" class="media-object">
-    								</div>
-    								<div class="media-body">
-    									<h5 class="media-heading">Đặc sản Tết tiền triệu</h5>
-    									Bưởi hồ lô, dưa hấu khắc chữ tài lộc và hình thỏi vàng là những sản phẩm quà tặng, biếu cho dịp Tết Nguyên đán sắp tới, với mức giá trên một triệu đồng mỗi quả.
-    								</div>
-    							</div>
-    						</div>
-    						<div class="col-md-6 text-margin-10">
-    							<ul class="list-unstyled">
-    								<li>
-    									<h5>Cuộc thi làm phim ngắn “An toàn giao thông”: Thay đổi nhận thức của người tham gia giao thông</h5>
-    								</li>
-    								<li>
-    									<h5>Diễn viên Tiến Lộc trổ tài nấu nướng với món ngỗng</h5>
-    								</li>
-    								<li>
-    									<h5>Gần 11.000 lao động đi làm việc ở nước ngoài trong tháng 9</h5>
-    								</li>
-    							</ul>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="panel panel-default">
-    				<div class="panel-heading text-uppercase clearfix">
-    					<strong class="text-primary">khuyến nông trồng trọt</strong>
-    					<a class="btn btn-primary btn-xs pull-right" href="#">Xem thêm</a>
-					</div>
-    				<div class="panel-body">
-    					<div class="row">
-    						<div class="col-md-6">
-    							<div class="media">
-    								<div class="media-left">
-    									<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTAyZWUxNzJhYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MDJlZTE3MmFiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy40Njg3NSIgeT0iMzYuNSI+NjR4NjQ8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" alt="" class="media-object">
-    								</div>
-    								<div class="media-body">
-    									<h5 class="media-heading">Sử dụng thuốc BVTV sinh học</h5>
-    									Việc sử dụng thuốc BVTV có nguồn gốc sinh học không những làm cho sâu bệnh hại không tăng tính kháng mà điều quan trọng là giảm thiểu ô nhiễm môi trường, nông sản an toàn.
-    								</div>
-    							</div>
-    						</div>
-    						<div class="col-md-6 text-margin-10">
-    							<ul class="list-unstyled">
-    								<li>
-    									<h5>Nên nhân rộng mô hình trồng hoa chống sâu rầy</h5>
-    								</li>
-    								<li>
-    									<h5>Kĩ thuật trồng ổi</h5>
-    								</li>
-    								<li>
-    									<h5>Nguyên tắc sản xuất rau sạch theo tiêu chuẩn GAP</h5>
-    								</li>
-    								<li>
-    									<h5>Phân tích mối nguy trong sản xuất rau VietGAP</h5>
-    								</li>
-    							</ul>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
+    		<div class="col-md-7 col-md-offset-2" ui-view>
+    			
        		</div>
     		<div id="rightPanel" class="col-md-3">
 				<div class="input-group">
