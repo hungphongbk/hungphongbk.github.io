@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AGRICULTURE ENCOURAGE</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/app.min.css">
+
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="dist/js/app.min.js"></script>
+</head>
+<body ng-app="Agriculture">
+	<nav id="navBar" class="navbar navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">AgriEncourage</a>
+			</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Trang chủ</a></li>
+				<li><a href="#">Thông tin chi tiết</a></li>
+				<li><a href="#">Tin tức</a></li>
+				<li><a href="#">Thống kê</a></li>
+				<li><a href="#">Diễn đàn</a></li>
+			</ul>
+			<form class="navbar-form navbar-right">
+            	<input type="text" class="form-control" placeholder="Tìm kiếm...">
+          	</form>
+		</div>
+		</div>
+    </nav>
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-md-2 sidebar">
+    			<ul class="nav nav-sidebar">
+    				<li><a href="">Giới thiệu chung</a></li>
+    				<li><a href="">Sự kiện trong tháng</a></li>
+    				<li><a href="">Tài liệu kĩ thuật</a></li>
+    				<li><a href="">Sơ đồ địa lý</a></li>
+    				<li><a href="">Thống kê</a></li>
+    			</ul>
+    			<h5 class="text-primary">LIÊN KẾT</h5>
+    			<ul class="nav nav-sidebar" ng-controller="LinkSitesController">
+    				<li ng-repeat="s in sites"><a href="https://www.google.com.vn">
+    					<img ng-src="{{ favicon(s.url); }}" alt="{{s.title}}">
+    					{{ s.title }}
+					</a></li>
+    			</ul>
+    			<h5 class="text-primary">LIÊN HỆ</h5>
+    			<p class="text-muted small">
+    				<strong>Đại học Bách khoa TPHCM</strong>, bộ môn CNPM<br />
+    				Phòng máy tính A5, 268 đường Lý Thường Kiệt, phường 14, quận 10, TPHCM<br />
+    			</p>
+    		</div>
+    		<div class="col-md-7 col-md-offset-2">
+    			<br />
+    			<div class="panel panel-default">
+    				<div class="panel-heading text-uppercase clearfix">
+    					<strong class="text-primary">tin tức sự kiện</strong>
+    					<a class="btn btn-primary btn-xs pull-right" href="#">Xem thêm</a>
+					</div>
+    				<div class="panel-body">
+    					<div class="row">
+    						<div class="col-md-6">
+    							<div class="media">
+    								<div class="media-left">
+    									<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTAyZWUxNzJhYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MDJlZTE3MmFiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy40Njg3NSIgeT0iMzYuNSI+NjR4NjQ8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" alt="" class="media-object">
+    								</div>
+    								<div class="media-body">
+    									<h5 class="media-heading">Đặc sản Tết tiền triệu</h5>
+    									Bưởi hồ lô, dưa hấu khắc chữ tài lộc và hình thỏi vàng là những sản phẩm quà tặng, biếu cho dịp Tết Nguyên đán sắp tới, với mức giá trên một triệu đồng mỗi quả.
+    								</div>
+    							</div>
+    						</div>
+    						<div class="col-md-6 text-margin-10">
+    							<ul class="list-unstyled">
+    								<li>
+    									<h5>Cuộc thi làm phim ngắn “An toàn giao thông”: Thay đổi nhận thức của người tham gia giao thông</h5>
+    								</li>
+    								<li>
+    									<h5>Diễn viên Tiến Lộc trổ tài nấu nướng với món ngỗng</h5>
+    								</li>
+    								<li>
+    									<h5>Gần 11.000 lao động đi làm việc ở nước ngoài trong tháng 9</h5>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="panel panel-default">
+    				<div class="panel-heading text-uppercase clearfix">
+    					<strong class="text-primary">khuyến nông trồng trọt</strong>
+    					<a class="btn btn-primary btn-xs pull-right" href="#">Xem thêm</a>
+					</div>
+    				<div class="panel-body">
+    					<div class="row">
+    						<div class="col-md-6">
+    							<div class="media">
+    								<div class="media-left">
+    									<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTAyZWUxNzJhYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1MDJlZTE3MmFiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMy40Njg3NSIgeT0iMzYuNSI+NjR4NjQ8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" alt="" class="media-object">
+    								</div>
+    								<div class="media-body">
+    									<h5 class="media-heading">Sử dụng thuốc BVTV sinh học</h5>
+    									Việc sử dụng thuốc BVTV có nguồn gốc sinh học không những làm cho sâu bệnh hại không tăng tính kháng mà điều quan trọng là giảm thiểu ô nhiễm môi trường, nông sản an toàn.
+    								</div>
+    							</div>
+    						</div>
+    						<div class="col-md-6 text-margin-10">
+    							<ul class="list-unstyled">
+    								<li>
+    									<h5>Nên nhân rộng mô hình trồng hoa chống sâu rầy</h5>
+    								</li>
+    								<li>
+    									<h5>Kĩ thuật trồng ổi</h5>
+    								</li>
+    								<li>
+    									<h5>Nguyên tắc sản xuất rau sạch theo tiêu chuẩn GAP</h5>
+    								</li>
+    								<li>
+    									<h5>Phân tích mối nguy trong sản xuất rau VietGAP</h5>
+    								</li>
+    							</ul>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+       		</div>
+    		<div id="rightPanel" class="col-md-3">
+				<div class="input-group">
+					<span class="input-group-addon" id="login-user">
+						<span class="fa fa-user"></span>
+					</span>
+					<input type="text" class="form-control" placeholder="Tên đăng nhập" aria-describedby="login-user">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon" id="login-pass">
+						<span class="fa fa-unlock-alt"></span>
+					</span>
+					<input type="text" class="form-control" placeholder="Mật khẩu" aria-describedby="login-pass">
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox"> Ghi nhớ đăng nhập
+					</label>
+				</div>
+				<div class="btn-group btn-group-justified" role="group">
+					<a class="btn btn-default" role="button">Đăng nhập</a>
+					<a class="btn btn-default" role="button">Đăng kí</a>
+				</div>
+				<hr />
+				<div class="disable-margin">
+					<h3>
+						<span class="fa fa-calendar"></span>&nbsp;
+						<small>Lịch công tác</small>
+					</h3>
+				</div>
+				<br />
+				<ul class="list-group">
+					<li class="list-group-item">
+						<div class="clearfix text-margin-5">
+							<p class="text-primary text-uppercase"><strong>trương hùng phong</strong></p>
+							<p class="text-muted pull-left">05/09/2015 tại Quận 10, TPHCM</p>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="clearfix text-margin-5">
+							<p class="text-primary text-uppercase"><strong>nguyễn thị hiệp thuận</strong></p>
+							<p class="text-muted pull-left">12/09/2015 tại Quận Thủ Đức, TPHCM</p>
+						</div>
+					</li>
+					<li class="list-group-item">
+						<div class="clearfix text-margin-5">
+							<p class="text-primary text-uppercase"><strong>hứa thị tố quyên</strong></p>
+							<p class="text-muted pull-left">12/11/2015 tại Quận Ninh Kiều, Cần Thơ</p>
+						</div>
+					</li>
+				</ul>
+    		</div>
+    	</div>
+    </div>	
+</body>
+</html>

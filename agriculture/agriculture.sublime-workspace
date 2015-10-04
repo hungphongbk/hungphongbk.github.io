@@ -1,0 +1,737 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"url",
+				"urlroot"
+			],
+			[
+				"req",
+				"$request〔variable〕"
+			],
+			[
+				"w",
+				"$withHtmlRenderLink〔variable〕"
+			],
+			[
+				"page",
+				"pageYOffset〔variable〕"
+			],
+			[
+				"off",
+				"offset〔function〕"
+			],
+			[
+				"scroll",
+				"scrollTop〔function〕"
+			],
+			[
+				"paddi",
+				"padding-right"
+			],
+			[
+				"font-",
+				"font-size: 〔property〕"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"templa",
+				"templateUrl"
+			],
+			[
+				"wor",
+				"wordsLimitTo〔function〕"
+			],
+			[
+				"ex",
+				"exceedSign"
+			],
+			[
+				"fil",
+				"filter	.filter() function"
+			],
+			[
+				"ele",
+				"elemYPos"
+			],
+			[
+				"$loca",
+				"$location	AngularJS"
+			],
+			[
+				"App",
+				"App::make('url"
+			],
+			[
+				"bxs",
+				"bxslider"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"switch",
+				"switch-out"
+			],
+			[
+				"swi",
+				"switch-out"
+			],
+			[
+				"di",
+				"direction"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"remo",
+				"removeClass	.removeClass()"
+			],
+			[
+				"scro",
+				"scroll	.scroll()"
+			],
+			[
+				"css",
+				"css	.css() - single"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"ava",
+				"ava-size-large"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"ng-sw",
+				"ng-switch-when	AngularJS"
+			],
+			[
+				"ng-mouse",
+				"ng-mouseleave	AngularJS"
+			],
+			[
+				"dele",
+				"deleteDirectory"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"ob_e",
+				"ob_end_clean"
+			],
+			[
+				"ob_ge",
+				"ob_get_contents"
+			],
+			[
+				"new",
+				"newW"
+			],
+			[
+				"imagecopyre",
+				"imagecopyresized"
+			],
+			[
+				"n",
+				"newW"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"Uli",
+				"UlibiApi"
+			],
+			[
+				"Arti",
+				"ArticleDestination"
+			],
+			[
+				"artil",
+				"article_id"
+			],
+			[
+				"arti",
+				"article"
+			],
+			[
+				"getTr",
+				"getTrendingWithArticle"
+			],
+			[
+				"con",
+				"context"
+			],
+			[
+				"mod",
+				"verbose_module	AngularJS"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"section",
+				"section-header"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"inner",
+				"innerHeight	.innerHeight()"
+			],
+			[
+				"first",
+				"firstChild"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"tab",
+				"tabcontents"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"list",
+				"list-n	list-style-type: none;"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"text",
+				"textarea	Tag"
+			],
+			[
+				"TM_REF",
+				"TM_REF_ComponentMapping"
+			],
+			[
+				"TM_Dan",
+				"TM_DanhMucSanPham"
+			],
+			[
+				"TM_PRO",
+				"TM_PROCEDURE_ThemDinhMuc"
+			],
+			[
+				"TM_Danh",
+				"TM_DanhMucSanPham"
+			],
+			[
+				"get",
+				"getPrice"
+			],
+			[
+				"dataS",
+				"dataSource"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"TM_DanhM",
+				"TM_DanhMucVatTu"
+			],
+			[
+				"TM_",
+				"TM_DanhMucLoaiSanPham"
+			],
+			[
+				"f",
+				"fk_DanhMucSanPham_DanhMucDinhMucVatTu"
+			],
+			[
+				"CL",
+				"COALESCE"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 134,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"INSTALL P",
+				"Package Control: Install Package"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ls",
+			"git add .",
+			"print(os.environ['PATH'])",
+			"import os",
+			"print(os.environ['PATH'])",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/hungphongbk/WebProjects/agriculture"
+	],
+	"file_history":
+	[
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/routes.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/pages/register.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/includes/header.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/pages/blog.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/gulpfile.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/includes/post-scripts.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/includes/head.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/composer.json",
+		"/Users/hungphongbk/PhpstormProjects/untitled.sublime-project",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/.bowerrc",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/.env",
+		"/Users/hungphongbk/Documents/code/XCode/RestApiTut/Podfile",
+		"/Users/hungphongbk/Documents/code/XCode/RestKit-0.24.1/README.md",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/index.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/pages/photos.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/pages/blogdetail.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/index.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/blog.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/.htaccess",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Providers/AppServiceProvider.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/storage/logs/laravel.log",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/pages/detail.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/layouts/default.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/js/app.module.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Models/Article.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/database/seeds/csv/Article.csv",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/views/includes/footer.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/views/index.blade.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/database/migrations/2015_08_18_065113_create_users_table.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/Controllers/Api/ArticleController.php",
+		"/Users/hungphongbk/Documents/code/EC2015/lab4/lab4-1.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/sass/app.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/index.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/ng-templates/blog-view.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/ng-templates/blog-view/blog-detail.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/ng-templates/404.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/sass/vars.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/Kernel.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/ng-templates/index-view.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/sass/page/home.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/sass/page/blog.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Exceptions/Handler.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/sass/reset.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/ng-templates/top-destinations.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/js/filters/wordLimitTo.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/js/controllers/destinationsController.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/Controllers/Api/DestinationController.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/ng-templates/top-ulibier.html",
+		"/Users/hungphongbk/Downloads/FONT COLLECTION/utm fONT/UTM Caviar.ttf",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Models/Photo.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/js/services/api.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/css/app.css",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/config/app.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/sass/animations.scss",
+		"/Users/hungphongbk/Downloads/src/bkool/Main.scala",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/sass/parallax.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/readme.md",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/js/jq.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/sass/parallax.sass",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/bower.json",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/.gitignore",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/.gitignore",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/index.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/cssjs-plugins/sticky/README.md",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/.sublime-settings/emmet/snippets.json",
+		"/Users/hungphongbk/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/hungphongbk/Google Drive/ulibi-resource/assan-v1.8/index.html",
+		"/Users/hungphongbk/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/bower_components",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/js/app.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/js/controllers/ulibierController.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/cssjs-plugins/sticky/example-header.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/js/external.js",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/Controllers/Api/ResourceController.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/Controllers/Api/PhotoController.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/config/filesystems.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/database/seeds/DatabaseSeeder.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/database/seeds/csv/Photo.csv",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Ulibier.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/database/seeds/UlibierSeeder.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/Controllers/Api/UlibierController.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Models/Mapping/ArticleDestination.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/database/seeds/ArticleDestinationMappingSeeder.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/database/seeds/csv/ArticleDestinationMapping.csv",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/Controllers/Api/ApiController.php",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/.gitattributes",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/scss/app.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/less/app.less",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/scss/reset.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/less/reset.less",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/scss/vars.scss",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/public/ng-templates/index-view.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/bower_components/bootstrap-material-design/dist/test.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/bower_components/bootstrap-material-design/README.md",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/bower_components/bootstrap-material-design/bootstrap-elements.html",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/database/seeds/csv/Destination.csv",
+		"/Users/hungphongbk/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/build.sh",
+		"/Users/hungphongbk/PhpstormProjects/untitled.sublime-workspace",
+		"/Users/hungphongbk/Documents/code/EC2015/lab3/lab3-1.css",
+		"/Users/hungphongbk/Documents/code/EC2015/lab3/lab3-1.html",
+		"/Users/hungphongbk/Downloads/assignment1/grammar/BKOOL.g4",
+		"/Users/hungphongbk/PhpstormProjects/ulibi/resources/assets/less/vars.less",
+		"/Users/hungphongbk/Downloads/utm_androgyne/utm-androgyne.ttf",
+		"/Users/hungphongbk/Documents/code/EC2015/lab3/lab3-4.css",
+		"/Users/hungphongbk/Documents/code/EC2015/lab3/lab3-4.html",
+		"/Users/hungphongbk/Documents/code/EC2015/lab3/lab3-3.html",
+		"/Users/hungphongbk/Documents/code/EC2015/lab3/lab3-3.css",
+		"/Applications/XAMPP/xamppfiles/share/mysql/mi_test_all.res",
+		"/Applications/XAMPP/xamppfiles/share/mysql/my-default.cnf",
+		"/Applications/XAMPP/xamppfiles/etc/my.cnf",
+		"/Applications/XAMPP/xamppfiles/etc/php.ini",
+		"/Applications/XAMPP/xamppfiles/logs/httpd.pid",
+		"/Applications/XAMPP/xamppfiles/htdocs/index.php",
+		"/Applications/XAMPP/xamppfiles/phpmyadmin/config.inc.php",
+		"/Applications/XAMPP/xamppfiles/var/mysql/Truongs-MacBook-Air.local.err",
+		"/Applications/XAMPP/xamppfiles/var/mysql/MacBook-Air.local.pid",
+		"/Applications/XAMPP/xamppfiles/var/mysql/localhost.pid",
+		"/Users/hungphongbk/Documents/code/EC2015/lab2-20.html",
+		"/Users/hungphongbk/Documents/code/EC2015/lab2-2.html",
+		"/Users/hungphongbk/Documents/code/EC2015/lab2-1.html",
+		"/Users/hungphongbk/Documents/code/CPP/MYSQL/main.c",
+		"/Users/hungphongbk/Documents/code/EC2015/lab2-20",
+		"/Applications/XAMPP/xamppfiles/var/mysql/mysql_upgrade_info",
+		"/Users/hungphongbk/Downloads/Oracle/wget.sh",
+		"/Users/hungphongbk/Desktop/SearchSoftware",
+		"/Users/hungphongbk/Desktop/wget.sh",
+		"/Users/hungphongbk/PhpstormProjects/vn-hackademics-4dev/package.json"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"AppSer",
+			"ROOT",
+			"blog-single.html",
+			"\"[^\"\\n]+(\\n+)?",
+			"settings.nextText",
+			"next",
+			"remove",
+			"transition",
+			"@include transf",
+			"ripples",
+			"material",
+			"uglifyAll",
+			"sticky",
+			".content",
+			"</section",
+			"<section",
+			"@",
+			"theme",
+			"layout[^\\s>]*",
+			"layout=\"[^\"]*\"",
+			"resources",
+			"layout=\"[^\"]*\"",
+			"content",
+			"animation",
+			"%);",
+			"mysqli",
+			"li",
+			"				<",
+			";\">",
+			"67BC78",
+			"right",
+			"22",
+			"INSERT INTO cdcol",
+			"CAO",
+			"RONG",
+			"DAI",
+			",,",
+			"T_m",
+			"V‡n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"blog",
+			"$1<br />",
+			"</div",
+			"<div",
+			"$",
+			"",
+			"tab",
+			"transition",
+			"left",
+			"@cao",
+			"@rong",
+			"@dai",
+			"Tấm",
+			"Ván"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 167.0
+	},
+	"output.find_results":
+	{
+		"height": 94.0
+	},
+	"pinned_build_system": "Gulp",
+	"project": "agriculture.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,30 @@
+{
+  "name": "agriculture",
+  "version": "1.0.0",
+  "authors": [
+    "Trương Phong <programmingd32@gmail.com>"
+  ],
+  "description": "agriculture",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "agriculture"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "angular": "angularjs#~1.4.7"
+  },
+  "devDependencies": {
+    "font-awesome": "~4.4.0"
+  }
+}
