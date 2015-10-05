@@ -319,47 +319,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4847,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/hungphongbk/IdeaProjects/ppl1/src/bkool/Main.scala",
-			"settings":
-			{
-				"buffer_size": 2882,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "gulpfile.js",
-			"settings":
-			{
-				"buffer_size": 916,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/templates/dashboard.html",
-			"settings":
-			{
-				"buffer_size": 4019,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/angular/app.js",
-			"settings":
-			{
-				"buffer_size": 461,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/templates/hotnews.html",
-			"settings":
-			{
-				"buffer_size": 1307,
+				"buffer_size": 121,
 				"line_ending": "Unix"
 			}
 		}
@@ -438,29 +398,24 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/hungphongbk/WebProjects/agriculture",
-		"/Users/hungphongbk/WebProjects/agriculture/api",
-		"/Users/hungphongbk/WebProjects/agriculture/dist",
-		"/Users/hungphongbk/WebProjects/agriculture/src",
-		"/Users/hungphongbk/WebProjects/agriculture/src/js",
-		"/Users/hungphongbk/WebProjects/agriculture/src/js/angular",
-		"/Users/hungphongbk/WebProjects/agriculture/src/js/angular/controllers",
-		"/Users/hungphongbk/WebProjects/agriculture/src/templates"
+		"/Users/hungphongbk/WebProjects/antlrjs"
 	],
 	"file_history":
 	[
+		"/Users/hungphongbk/WebProjects/agriculture/src/templates/hotnews.html",
+		"/Users/hungphongbk/WebProjects/agriculture/src/js/angular/app.js",
+		"/Users/hungphongbk/WebProjects/agriculture/src/templates/dashboard.html",
+		"/Users/hungphongbk/WebProjects/agriculture/gulpfile.js",
+		"/Users/hungphongbk/IdeaProjects/ppl1/src/bkool/Main.scala",
+		"/Users/hungphongbk/WebProjects/agriculture/index.html",
 		"/Users/hungphongbk/WebProjects/agriculture/src/js/angular/factory/api.js",
 		"/Users/hungphongbk/WebProjects/agriculture/dist/js/templates.min.js",
 		"/Users/hungphongbk/WebProjects/agriculture/package.json",
-		"/Users/hungphongbk/WebProjects/agriculture/src/templates/hotnews.html",
 		"/Users/hungphongbk/WebProjects/agriculture/src/css/custom.css",
-		"/Users/hungphongbk/WebProjects/agriculture/gulpfile.js",
-		"/Users/hungphongbk/WebProjects/agriculture/src/templates/dashboard.html",
 		"/Users/hungphongbk/WebProjects/agriculture/src/js/angular/controllers/LinkSitesController.js",
 		"/Users/hungphongbk/WebProjects/agriculture/api/eventNews.json",
 		"/Users/hungphongbk/WebProjects/.gitignore",
 		"/Users/hungphongbk/WebProjects/agriculture/.gitignore",
-		"/Users/hungphongbk/WebProjects/agriculture/src/js/angular/app.js",
 		"/Users/hungphongbk/WebProjects/agriculture/src/js/custom.js",
 		"/Users/hungphongbk/WebProjects/agriculture/dist/css/app.min.css",
 		"/Users/hungphongbk/PhpstormProjects/ulibi/app/Http/routes.php",
@@ -574,9 +529,7 @@
 		"/Applications/XAMPP/xamppfiles/share/mysql/mi_test_all.res",
 		"/Applications/XAMPP/xamppfiles/share/mysql/my-default.cnf",
 		"/Applications/XAMPP/xamppfiles/etc/my.cnf",
-		"/Applications/XAMPP/xamppfiles/etc/php.ini",
-		"/Applications/XAMPP/xamppfiles/logs/httpd.pid",
-		"/Applications/XAMPP/xamppfiles/htdocs/index.php"
+		"/Applications/XAMPP/xamppfiles/etc/php.ini"
 	],
 	"find":
 	{
@@ -665,7 +618,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -674,15 +627,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4847,
+						"buffer_size": 121,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1720,
-								1720
+								80,
+								80
 							]
 						],
 						"settings":
@@ -691,151 +644,9 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/hungphongbk/IdeaProjects/ppl1/src/bkool/Main.scala",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2882,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2240,
-								2256
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Scala/Scala.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 737.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "gulpfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 916,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								162,
-								162
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/templates/dashboard.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4019,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2281,
-								2281
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/js/angular/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 461,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								49,
-								49
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/templates/hotnews.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1307,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								137,
-								137
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -881,7 +692,7 @@
 		"height": 94.0
 	},
 	"pinned_build_system": "Gulp",
-	"project": "agriculture.sublime-project",
+	"project": "antlrJs.sublime-project",
 	"replace":
 	{
 		"height": 40.0
