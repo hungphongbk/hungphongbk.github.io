@@ -27,6 +27,6 @@
     "font-awesome": "~4.4.0",
     "angular-ui-router": "~0.2.15",
     "underscore": "~1.8.3",
-    "antlr4": "~4.5.1"
+    "requirejs": "~2.1.20"
   }
 }
