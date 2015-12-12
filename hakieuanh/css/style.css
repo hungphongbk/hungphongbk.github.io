@@ -116,6 +116,34 @@
     .app .cake-item h3 {
       margin-top: 10px;
       margin-bottom: 0; }
+  .app .formula-detail img.cover {
+    width: 100%; }
+  .app .inline-group > * {
+    display: inline-block; }
+  .app .btn {
+    font-size: inherit; }
+    .app .btn.btn-theme {
+      background: #880B09;
+      color: white;
+      border-radius: 0;
+      padding-top: 12px; }
+  .app .list-group-header {
+    padding: 8px 15px;
+    background: #880B09;
+    color: white; }
+    .app .list-group-header h3, .app .list-group-header h4 {
+      margin: 0; }
+  .app .list-group-item {
+    border-radius: 0 !important;
+    border: none; }
+    .app .list-group-item:not(:last-child) {
+      border-bottom: 2px dashed; }
+  .app .list-group-item-image img {
+    float: left; }
+  .app .list-group-item-image .content {
+    display: block;
+    padding-left: 80px;
+    padding-top: 5px; }
   .app .footer {
     background: #D5D5D5; }
     .app .footer .footer-label-group {

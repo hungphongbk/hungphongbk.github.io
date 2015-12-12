@@ -172,6 +172,50 @@ $paddingBase: 40px;
       margin-bottom: 0;
     }
   }
+  .formula-detail {
+    img.cover {
+      width: 100%;
+    }
+  }
+  .inline-group > * {
+    display: inline-block;
+  }
+  .btn {
+    font-size: inherit;
+
+    &.btn-theme {
+      background: $themeColor;
+      color: white;
+      border-radius: 0;
+      padding-top: 12px;
+    }
+  }
+  .list-group-header {
+    padding: 8px 15px;
+    background: #880B09;
+    color: white;
+    h3, h4 {
+      margin: 0;
+    }
+  }
+  .list-group-item {
+    border-radius: 0 !important;
+    border: none;
+
+    &:not(:last-child) {
+      border-bottom: 2px dashed;
+    }
+  }
+  .list-group-item-image {
+    img {
+      float: left;
+    }
+    .content {
+      display: block;
+      padding-left: 80px;
+      padding-top: 5px;
+    }
+  }
   .footer {
     background: $footerColor;
 
