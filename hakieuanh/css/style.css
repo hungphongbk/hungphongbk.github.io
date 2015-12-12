@@ -8,6 +8,12 @@
   height: 2561px;
   opacity: 0.3; }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .app {
   color: #880B09;
   font-family: "MinionPro", serif;
@@ -121,5 +127,7 @@
       vertical-align: bottom; }
       .app .footer .footer-label h3 {
         margin-top: 60px; }
+    .app .footer .footer-contents [class^='col-']:not(:first-child) {
+      border-left: 1px dashed; }
 
 /*# sourceMappingURL=style.css.map */

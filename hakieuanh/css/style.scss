@@ -27,6 +27,12 @@ $paddingBase: 40px;
   height: 2561px;
   opacity: 0.3;
 }
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
 
 .app {
   color: $themeColor;
@@ -178,6 +184,11 @@ $paddingBase: 40px;
       height: 99px;
       vertical-align: bottom;
       h3 { margin-top: 60px; }
+    }
+    .footer-contents {
+      [class^='col-']:not(:first-child) {
+        border-left: 1px dashed;
+      }
     }
   }
 }
