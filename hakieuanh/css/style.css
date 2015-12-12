@@ -129,5 +129,14 @@
         margin-top: 60px; }
     .app .footer .footer-contents [class^='col-']:not(:first-child) {
       border-left: 1px dashed; }
+    .app .footer .footer-social-hub > span {
+      display: inline-block;
+      padding: 10px;
+      width: 38px;
+      height: 38px;
+      background-color: white;
+      border-radius: 50%; }
+      .app .footer .footer-social-hub > span:not(:last-child) {
+        margin-right: 5px; }
 
 /*# sourceMappingURL=style.css.map */
