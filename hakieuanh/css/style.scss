@@ -1,6 +1,7 @@
 $innerWidth: 1020px;
 $themeColor: #880B09;
 $themeLightColor: #FFE5E6;
+$footerColor: #D5D5D5;
 $paddingBase: 40px;
 
 @font-face {
@@ -163,6 +164,20 @@ $paddingBase: 40px;
     h3 {
       margin-top: 10px;
       margin-bottom: 0;
+    }
+  }
+  .footer {
+    background: $footerColor;
+
+    .footer-label-group {
+      border-bottom: 1px solid;
+      margin-bottom: 20px;
+    }
+    .footer-label {
+      padding-right: 45px;
+      height: 99px;
+      vertical-align: bottom;
+      h3 { margin-top: 60px; }
     }
   }
 }

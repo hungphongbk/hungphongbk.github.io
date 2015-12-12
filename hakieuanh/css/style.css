@@ -110,5 +110,16 @@
     .app .cake-item h3 {
       margin-top: 10px;
       margin-bottom: 0; }
+  .app .footer {
+    background: #D5D5D5; }
+    .app .footer .footer-label-group {
+      border-bottom: 1px solid;
+      margin-bottom: 20px; }
+    .app .footer .footer-label {
+      padding-right: 45px;
+      height: 99px;
+      vertical-align: bottom; }
+      .app .footer .footer-label h3 {
+        margin-top: 60px; }
 
 /*# sourceMappingURL=style.css.map */

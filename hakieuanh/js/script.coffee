@@ -1,4 +1,7 @@
 ((ng,$)->
+  randomNumberGenerator = (min,max)->
+    Math.floor Math.random()*(max-min+1)+min
+
   app=ng.module 'app',[]
   app.controller 'menuController',[
     '$scope',
@@ -36,5 +39,16 @@
       $(elem).raty
         starOn: 'images/star-on.png'
         starOff: 'images/star-off.png'
+  app.directive 'tags',->
+    restrict: 'A'
+    scope:
+      tagsMinSize:'@'
+      tagsMaxSize:'@'
+    link:(scope,elem,attrs)->
+      minSize = Number scope.tagsMinSize
+      maxSize = Number scope.tagsMaxSize
+      $(elem).find('a').each (_,e)->
+        size = (randomNumberGenerator minSize*10, maxSize*10)/10
+        $(e).css 'fontSize',size+'em'
   return
 )(angular,jQuery)
