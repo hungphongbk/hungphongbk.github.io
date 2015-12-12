@@ -216,6 +216,16 @@ $paddingBase: 40px;
       padding-top: 5px;
     }
   }
+  .form-control {
+    font-size: inherit;
+    border-width: 2px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    height: 40px;
+  }
   .footer {
     background: $footerColor;
 
