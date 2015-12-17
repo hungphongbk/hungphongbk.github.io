@@ -1,0 +1,18 @@
+{
+  "name": "hexa-snake",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Trương Phong <programmingd32@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hungphongbk/hungphongbk.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
