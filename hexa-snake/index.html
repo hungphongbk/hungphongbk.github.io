@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="dist/external/all.css">
+    <link rel="stylesheet" href="dist/assets/css/game.css">
 </head>
-<body>
+<body ng-app="SnakeApp">
 
+    <div id="pageWrapper" ui-view>
+    </div>
+    <script type="text/ng-template" id="red.html">
+        <div class="page" id="red">
+            <h1>SnakeGame</h1>
+            <a href="" ui-sref="green" class="btn btn-flat btn-flat-default text-uppercase btn-lg">Start Game</a>
+        </div>
+    </script>
+    <script type="text/ng-template" id="green.html">
+        <div class="page" style="background-color: green">
+        </div>
+    </script>
+    <script type="text/ng-template" id="blue.html">
+        <div class="page" style="background-color: blue">
+
+        </div>
+    </script>
+
+<script src="dist/external/all.js"></script>
+<script src="dist/assets/js/game.js"></script>
 </body>
 </html>

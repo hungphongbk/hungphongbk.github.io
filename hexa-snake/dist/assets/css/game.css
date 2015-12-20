@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+  width: 100%; }
+
+#pageWrapper {
+  color: #888888; }
+  #pageWrapper .page {
+    height: 100%;
+    width: 100%; }
+  #pageWrapper.ng-leave {
+    animation: fadeOut 0.5s; }
+  #pageWrapper.ng-enter {
+    animation: fadeIn 0.5s; }
+
+a, a:hover, a:visited {
+  color: inherit; }
+
+.btn-flat {
+  border-radius: 0;
+  border: none; }
+  .btn-flat-default {
+    background-color: #dfdfdf; }
+
+#red {
+  background: #f0f0f0;
+  text-align: center; }
+  #red h1 {
+    font-weight: 100;
+    margin-bottom: 1em; }
+
+@media screen and (max-device-width: 768px) {
+  body {
+    font-size: 2em; }
+  #pageWrapper {
+    height: 100%;
+    width: 100%; }
+  #red {
+    padding-top: 40%; }
+    #red .btn-flat {
+      width: 80%; } }
+
+@media screen and (min-device-width: 768px) {
+  #pageWrapper {
+    height: 600px;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-400px, -300px);
+    -moz-transform: translate(-400px, -300px);
+    transform: translate(-400px, -300px); }
+  #red {
+    padding-top: 150px; }
+    #red h1 {
+      font-size: 72px;
+      margin-bottom: 20px; }
+    #red .btn-flat {
+      width: 300px; } }
