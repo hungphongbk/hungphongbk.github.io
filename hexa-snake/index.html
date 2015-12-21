@@ -13,16 +13,18 @@
     </div>
     <script type="text/ng-template" id="red.html">
         <div class="page" id="red">
+            <img src="dist/assets/images/HexaSprites_GameIcon.png" alt="" id="game-icon">
             <h1>SnakeGame</h1>
             <a href="" ui-sref="green" class="btn btn-flat btn-flat-default text-uppercase btn-lg">Start Game</a>
         </div>
     </script>
     <script type="text/ng-template" id="green.html">
-        <div class="page" style="background-color: green">
+        <div class="page" id="green">
+            <game game-name="snake"></game>
         </div>
     </script>
     <script type="text/ng-template" id="blue.html">
-        <div class="page" style="background-color: blue">
+        <div class="page" id="blue" style="background-color: blue">
 
         </div>
     </script>

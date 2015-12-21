@@ -3,7 +3,9 @@
     <words>
       <w>dest</w>
       <w>phaser</w>
+      <w>preload</w>
       <w>scss</w>
+      <w>spritesheet</w>
     </words>
   </dictionary>
 </component>

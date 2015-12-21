@@ -3,7 +3,8 @@ html, body {
   width: 100%; }
 
 #pageWrapper {
-  color: #888888; }
+  color: #888888;
+  background: #f0f0f0; }
   #pageWrapper .page {
     height: 100%;
     width: 100%; }
@@ -22,11 +23,14 @@ a, a:hover, a:visited {
     background-color: #dfdfdf; }
 
 #red {
-  background: #f0f0f0;
   text-align: center; }
   #red h1 {
     font-weight: 100;
     margin-bottom: 1em; }
+
+#green .game-screen {
+  height: 100%;
+  width: 100%; }
 
 @media screen and (max-device-width: 768px) {
   body {
@@ -50,9 +54,12 @@ a, a:hover, a:visited {
     -moz-transform: translate(-400px, -300px);
     transform: translate(-400px, -300px); }
   #red {
-    padding-top: 150px; }
+    padding-top: 120px; }
     #red h1 {
       font-size: 72px;
       margin-bottom: 20px; }
     #red .btn-flat {
-      width: 300px; } }
+      width: 300px; }
+    #red #game-icon {
+      display: inline-block;
+      width: 200px; } }
