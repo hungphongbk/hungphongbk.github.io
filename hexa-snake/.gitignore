@@ -1,5 +1,6 @@
 node_modules
 /src
+/dist/assets/maps
 /bower_components
 /gulpfile.*
 package.json
