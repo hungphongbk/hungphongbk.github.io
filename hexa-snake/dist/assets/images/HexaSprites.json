@@ -2,7 +2,7 @@
 
 {
 	"filename": "HexaSprites-02.png",
-	"frame": {"x":1,"y":1,"w":184,"h":208},
+	"frame": {"x":188,"y":1,"w":184,"h":208},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":13,"y":0,"w":184,"h":208},
@@ -10,7 +10,7 @@
 },
 {
 	"filename": "HexaSprites-03.png",
-	"frame": {"x":187,"y":1,"w":184,"h":208},
+	"frame": {"x":374,"y":1,"w":184,"h":208},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":13,"y":0,"w":184,"h":208},
@@ -18,7 +18,7 @@
 },
 {
 	"filename": "HexaSprites-04.png",
-	"frame": {"x":373,"y":1,"w":184,"h":208},
+	"frame": {"x":560,"y":1,"w":184,"h":208},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":11,"y":0,"w":184,"h":208},
@@ -26,10 +26,18 @@
 },
 {
 	"filename": "HexaSprites-05.png",
-	"frame": {"x":559,"y":1,"w":184,"h":208},
+	"frame": {"x":746,"y":1,"w":184,"h":208},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":13,"y":0,"w":184,"h":208},
+	"sourceSize": {"w":208,"h":208}
+},
+{
+	"filename": "HexaSprites-06.png",
+	"frame": {"x":1,"y":1,"w":185,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":0,"w":185,"h":208},
 	"sourceSize": {"w":208,"h":208}
 }],
 "meta": {
@@ -37,8 +45,8 @@
 	"version": "1.0",
 	"image": "HexaSprites.png",
 	"format": "RGBA8888",
-	"size": {"w":744,"h":210},
+	"size": {"w":931,"h":210},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:e36a6029c030a9d1c44e2a014c55dff3:2d1c72f3df286866e1fe2462ceab82f6:c5b03490afb0808dcac5929f221520e3$"
+	"smartupdate": "$TexturePacker:SmartUpdate:8cc0ab2f8144fa61f2df264410a78671:bfbaf6b589a77ff165f0ba9d815ce0a7:c5b03490afb0808dcac5929f221520e3$"
 }
 }
