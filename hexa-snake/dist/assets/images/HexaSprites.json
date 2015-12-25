@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "HexaSprites-02.png",
+	"frame": {"x":1,"y":1,"w":184,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":0,"w":184,"h":208},
+	"sourceSize": {"w":208,"h":208}
+},
+{
+	"filename": "HexaSprites-03.png",
+	"frame": {"x":187,"y":1,"w":184,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":0,"w":184,"h":208},
+	"sourceSize": {"w":208,"h":208}
+},
+{
+	"filename": "HexaSprites-04.png",
+	"frame": {"x":373,"y":1,"w":184,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":0,"w":184,"h":208},
+	"sourceSize": {"w":208,"h":208}
+},
+{
+	"filename": "HexaSprites-05.png",
+	"frame": {"x":559,"y":1,"w":184,"h":208},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":0,"w":184,"h":208},
+	"sourceSize": {"w":208,"h":208}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "HexaSprites.png",
+	"format": "RGBA8888",
+	"size": {"w":744,"h":210},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e36a6029c030a9d1c44e2a014c55dff3:2d1c72f3df286866e1fe2462ceab82f6:c5b03490afb0808dcac5929f221520e3$"
+}
+}

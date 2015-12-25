@@ -3,4 +3,5 @@ node_modules
 /dist/assets/maps
 /bower_components
 /gulpfile.*
+/test
 package.json
