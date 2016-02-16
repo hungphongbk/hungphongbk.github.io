@@ -2,21 +2,20 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/src/coffee/config.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/gulp-coffee/test/fixtures/grammar.js" />
+        <item url="file://$PROJECT_DIR$/src/coffee/game.js" />
         <item url="file://$PROJECT_DIR$/node_modules/resolve/test/resolver/mug.js" />
         <item url="file://$PROJECT_DIR$/node_modules/resolve/test/resolver/cup.js" />
         <item url="file://$PROJECT_DIR$/gulpfile.js" />
-        <item url="file://$PROJECT_DIR$/node_modules/gulp-coffee/test/fixtures/grammar.js" />
-        <item url="file://$PROJECT_DIR$/src/coffee/game.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/src/coffee/config.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/gulp-coffee/test/fixtures/grammar.js" />
+      <root url="file://$PROJECT_DIR$/src/coffee/game.js" />
       <root url="file://$PROJECT_DIR$/node_modules/resolve/test/resolver/mug.js" />
       <root url="file://$PROJECT_DIR$/node_modules/resolve/test/resolver/cup.js" />
       <root url="file://$PROJECT_DIR$/gulpfile.js" />
-      <root url="file://$PROJECT_DIR$/node_modules/gulp-coffee/test/fixtures/grammar.js" />
-      <root url="file://$PROJECT_DIR$/src/coffee/game.js" />
     </CLASSES>
     <SOURCES />
   </library>
