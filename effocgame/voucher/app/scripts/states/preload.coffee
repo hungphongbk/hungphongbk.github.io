@@ -6,7 +6,7 @@ class Preload
     loadingBar.anchor.setTo 0.5, 0.5
     @load.setPreloadSprite loadingBar
 
-    @game.load.spritesheet 'voucher', 'assets/sprites/voucher.png', 600, 600, 8
+    @game.load.spritesheet 'voucher', 'assets/sprites/voucher.png', 250, 250, 8
 
 
   create: ->
