@@ -10,7 +10,7 @@ class Boot
 
 
   create: ->
-    @game.stage.backgroundColor = 0x004D40
+    @game.stage.backgroundColor = 0x00241E
     @scale.scaleMode = Phaser.ScaleManager.SHOW_ALL
     @game.state.start 'preload'
 
