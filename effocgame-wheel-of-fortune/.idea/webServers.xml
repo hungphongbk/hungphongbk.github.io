@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="05893fe3-ccd7-4ab9-bb48-6b32a760693d" name="hungphongbk.tmp-technology.com" url="http://52.76.117.234">
+        <fileTransfer host="52.76.117.234" port="22" privateKey="$USER_HOME$/hungphongbk-51202744.pem" rootFolder="/home/ubuntu/www" accessType="SFTP" username="ubuntu" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

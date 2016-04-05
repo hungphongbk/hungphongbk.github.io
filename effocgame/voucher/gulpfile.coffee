@@ -48,7 +48,7 @@ gulp.task 'watchChanges', ->
 
   watchFiles "#{paths.appAssets}/**",             'copyAssets'
   watchFiles "#{paths.appStyles}/**",             'copyStyles'
-  watchFiles ["#{paths.appDir}/**/*.html", "#{paths.appDir}/**/*.php", "#{paths.appDir}/*.json"],         'copyHtml'
+  watchFiles "#{paths.appDir}/**/*.html",         'copyHtml'
   watchFiles "#{paths.appScripts}/**/*.coffee",   'coffeeify'
   watchFiles "#{paths.appPrefabDir}/**/*.coffee", 'coffeeify'
 
@@ -56,7 +56,7 @@ gulp.task 'watchChanges', ->
 gulp.task 'copyHtml', ->
 
   gulp
-    .src ["#{paths.appDir}/*.html", "#{paths.appDir}/*.php", "#{paths.appDir}/*.json", "#{paths.appDir}/.htaccess"]
+    .src "#{paths.appDir}/*.html"
     .pipe gulp.dest paths.buildDir
 
 
@@ -78,7 +78,7 @@ gulp.task 'coffeeify', ->
 
   b = browserify
     entries    : "#{paths.appScripts}/game.coffee"
-    debug      : off
+    debug      : on
     transform  : ['coffeeify']
     extensions : ['.coffee']
 
@@ -87,6 +87,14 @@ gulp.task 'coffeeify', ->
     .pipe buffer()
     .pipe plugins.rename 'game.js'
     .pipe gulp.dest "#{paths.buildDir}/scripts"
+
+
+gulp.task 'browserSync', ['build'], ->
+
+  browserSync.init ["#{paths.buildDir}/**"],
+    server   :
+      baseDir: paths.buildDir
+
 
 gulp.task 'build', ['coffeeify', 'copyHtml', 'copyStyles', 'copyAssets', 'watchChanges'], ->
 
@@ -102,5 +110,5 @@ gulp.task 'build', ['coffeeify', 'copyHtml', 'copyStyles', 'copyAssets', 'watchC
 
 gulp.task 'default', ['clean'], ->
 
-  gulp.start 'build'
+  gulp.start 'browserSync'
 

@@ -1,5 +1,5 @@
 {
-  "name": "effocgame-wheel-of-fortune",
+  "name": "voucher",
   "version": "0.0.0",
   "description": "",
   "repository": "",
@@ -11,14 +11,10 @@
     ]
   },
   "browser": {
-    "phaser": "./app/lib/phaser-official/build/phaser.min.js",
-    "jquery": "./app/lib/jquery/dist/jquery.min.js",
-    "sweetalert": "./app/lib/sweetalert/dist/sweetalert.min.js"
+    "phaser": "./app/lib/phaser-official/build/phaser.min.js"
   },
   "browserify-shim": {
-    "phaser": "Phaser",
-    "jquery": "$",
-    "sweetalert": "sweetAlert"
+    "phaser": "Phaser"
   },
   "dependencies": {
   },

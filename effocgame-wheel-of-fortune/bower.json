@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "phaser-official": "^2.4.2"
+  },
+  "devDependencies": {
+    "jquery": "^2.2.0"
   }
 }
-
