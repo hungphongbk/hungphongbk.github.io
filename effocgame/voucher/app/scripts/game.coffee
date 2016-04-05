@@ -1,18 +1,15 @@
 Phaser  = require 'phaser'
 Boot    = require './states/boot'
 Preload = require './states/preload'
-Menu    = require './states/menu'
 Main    = require './states/main'
 
 class Game extends Phaser.Game
 
-  constructor : ->
-
-    super 640, 480, Phaser.AUTO, 'game-content'
+  constructor : (width, height, @dpr)->
+    super width, height, Phaser.AUTO, 'game-content'
 
     @state.add 'boot', Boot
     @state.add 'preload', Preload
-    @state.add 'menu', Menu
     @state.add 'main', Main
 
     @state.start 'boot'
@@ -20,4 +17,5 @@ class Game extends Phaser.Game
 
 window.onload = ->
 
-  game = new Game()
+  dpr = window.devicePixelRatio || 1
+  game = new Game(window.innerWidth * dpr, window.innerHeight * dpr, dpr)
