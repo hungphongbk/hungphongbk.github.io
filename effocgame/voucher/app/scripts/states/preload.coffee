@@ -2,10 +2,10 @@ class Preload
 
   preload: ->
 
-    loadingBar = @add.sprite 320, 240, 'preloader'
+    loadingBar = @add.sprite @game.world.centerX, @game.world.centerY, 'preloader'
     loadingBar.anchor.setTo 0.5, 0.5
     @load.setPreloadSprite loadingBar
-    
+
     @game.load.spritesheet 'voucher', 'assets/sprites/voucher.png', 600, 600, 8
 
 
