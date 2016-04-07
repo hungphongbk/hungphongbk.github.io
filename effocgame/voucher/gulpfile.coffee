@@ -78,13 +78,14 @@ gulp.task 'coffeeify', ->
 
   b = browserify
     entries    : "#{paths.appScripts}/game.coffee"
-    debug      : on
+    debug      : off
     transform  : ['coffeeify']
     extensions : ['.coffee']
 
   b.bundle()
     .pipe source "#{paths.appScripts}/game.coffee"
     .pipe buffer()
+    #.pipe plugins.uglify()
     .pipe plugins.rename 'game.js'
     .pipe gulp.dest "#{paths.buildDir}/scripts"
 

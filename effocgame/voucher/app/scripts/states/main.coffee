@@ -1,77 +1,128 @@
 Phaser  = require 'phaser'
 
+shuffle = (arr) ->
+  for i in [arr.length-1..1]
+    j = Math.floor Math.random() * (i + 1)
+    [arr[i], arr[j]] = [arr[j], arr[i]]
+  arr
+
+distance = (x1, y1, x2, y2) ->
+  Math.sqrt ((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
+
 class Main
 
   distX = []
   distY = []
+  voucherSpeed = 40
+  moveSpeed = 1
+  number_of_vouchers = 5
 
   create : ->
 
-    spScale = (if @game.width/250 < 4 then 1 else @game.width/1000)
-    dX = (if @game.width/(250 * spScale) < 3 then 1/2 else 1/3)
-    dY = (if @game.height/(120 * spScale) < 4 then 1/3 else 2/3)
-    distX = [dX, dX, 2-dX, 2-dX, 1]
-    distY = [2-dY, dY, 2-dY, dY, 1]
-
-    style = { font: 35*@game.dpr + 'px Arial', fill: '#ff0044', align: 'center' }
-    # text = @game.add.text @game.world.centerX, @game.world.centerY, "Ready to rock!", style
-    # text.anchor.set 0.5
-    # text.alpha = 0.1
-    # @game.add.tween(text).to( { alpha: 1  }, 5000, "Linear", true )
+    spScale = (if @game.width/@game.voucherInfo.size < 4 then 1 else @game.width/1000)
+    distX = [2/3, 4/3, 1/3, 1, 5/3]
+    distY = [2/3, 2/3, 4/3, 4/3, 4/3]
 
     @voucher = []
-    for i in [0..5]
-      @voucher[i] = @game.add.sprite @game.world.centerX, @game.world.centerY, 'voucher'
+    indexes = shuffle([0,0,0,1,1])
+    for i in [0..number_of_vouchers-1]
+      @voucher[i] = @game.add.sprite @game.world.centerX, @game.world.centerY, (if indexes[i]==1 then 'voucher' else 'voucher-fail')
       @voucher[i].anchor.set 0.5
       @voucher[i].scale.set spScale
-      @voucher[i].animations.add 'spin', [0..8]
-      @voucher[i].animations.add 'spin-reverse', [8..0]
+      @voucher[i].animations.add 'spin', [0..@game.voucherInfo.frames]
+      @voucher[i].animations.add 'spin-reverse', [@game.voucherInfo.frames..0]
 
     console.log @voucher[0].width, @game.width
     @viewVoucher()
 
   viewVoucher: ->
     tweens = []
-    for i in [0..5]
-      tweens[i] = @game.add.tween @voucher[i]
-      tweens[i].to {x: distX[i] * @game.world.centerX, y: distY[i] * @game.world.centerY}, (if i == 4 then 200 else 400), Phaser.Easing.Bounce.Out
-      tweens[i].onComplete.add (obj)->
-        obj.play 'spin', 25
+    indexes = shuffle([0..number_of_vouchers-1])
+    first_tween = null
+    last_tween = null
 
-      tweens[i - 1].chain(tweens[i]) if i > 0
-    tweens[0].delay 2000
-    tweens[4].onComplete.add =>
+    x0 = @game.world.centerX
+    y0 = @game.world.centerY
+
+    for i in indexes
+      tweens[i] = @game.add.tween @voucher[i]
+
+      x = x0*distX[i]
+      y = y0*distY[i]
+
+      tweens[i].to {x: x, y: y}, distance(x,y,x0,y0)*moveSpeed, Phaser.Easing.Bounce.Out
+      tweens[i].onComplete.add (obj)->
+        obj.play 'spin', voucherSpeed
+
+      last_tween.chain(tweens[i]) if last_tween?
+      last_tween = tweens[i]
+      first_tween = tweens[i] if !(first_tween?)
+    first_tween.delay 1000
+    last_tween.onComplete.add =>
       @game.time.events.add 2000, =>
         @collapseVoucher()
-    tweens[0].start()
+    first_tween.start()
 
   collapseVoucher: ->
     tweens = []
+    indexes = shuffle([0..number_of_vouchers-1])
+    console.log indexes
+    first_tween = null
+    last_tween = null
 
-    for i in [0..5]
-      @voucher[i].play 'spin-reverse', 25
+    x0 = @game.world.centerX
+    y0 = @game.world.centerY
 
-    for i in [0..4]
+    for i in [0..number_of_vouchers-1]
+      @voucher[i].play 'spin-reverse', voucherSpeed
+
+    for i in indexes
       tweens[i] = @game.add.tween @voucher[i]
-      tweens[i].to {x: @game.world.centerX, y: @game.world.centerY}, 400, Phaser.Easing.Linear.None
 
-      tweens[i - 1].chain(tweens[i]) if i > 0
+      x = x0*distX[i]
+      y = y0*distY[i]
 
-    tweens[0].delay 500
-    tweens[3].onComplete.add =>
+      tweens[i].to {x: x0, y: y0}, distance(x,y,x0,y0)*moveSpeed, Phaser.Easing.Linear.None
+
+      last_tween.chain(tweens[i]) if last_tween?
+      last_tween = tweens[i]
+      first_tween = tweens[i] if !(first_tween?)
+
+    first_tween.delay 500
+    last_tween.onComplete.add =>
       @game.time.events.add 200, =>
         @showVoucher()
 
-    tweens[0].start()
+    first_tween.start()
 
   showVoucher: ->
     tweens = []
-    for i in [0..4]
+    for i in [0..number_of_vouchers-1]
       tweens[i] = @game.add.tween @voucher[i]
-      tweens[i].to {x: distX[i] * @game.world.centerX, y: distY[i] * @game.world.centerY}, 400, Phaser.Easing.Bounce.Out
+      tweens[i].to {x: distX[i] * @game.world.centerX, y: distY[i] * @game.world.centerY}, 300, Phaser.Easing.Bounce.Out
       tweens[i - 1].chain(tweens[i]) if i > 0
-    tweens[3].onComplete.add =>
-
+    tweens[4].onComplete.add =>
+      @allowClickToVouchers()
     tweens[0].start()
+
+  allowClickToVouchers: ->
+    for i in [0..number_of_vouchers-1]
+      @voucher[i].inputEnabled = true
+      @voucher[i].input.useHandCursor = true
+      @voucher[i].events.onInputDown.add @whenClickToVoucher, @
+
+  disableClickAndShowVoucher: (sprite)->
+    for i in [0..number_of_vouchers-1]
+      @voucher[i].inputEnabled = false
+      @voucher[i].input.useHandCursor = false
+      if @voucher[i]!=sprite
+        @game.add.tween @voucher[i]
+          .to {alpha: 0.3}, 200, Phaser.Easing.Linear.None
+          .start()
+
+  whenClickToVoucher: (sprite)->
+    sprite.play 'spin'
+    @disableClickAndShowVoucher sprite
+
 
 module.exports = Main
