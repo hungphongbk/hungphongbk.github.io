@@ -65,7 +65,8 @@ Game = (function(superClass) {
 window.onload = function() {
   var dpr, game;
   dpr = window.devicePixelRatio || 1;
-  return game = new Game(window.innerWidth * dpr, window.innerHeight * dpr, dpr);
+  this.mobileWeb = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(navigator.userAgent);
+  return game = new Game(this.mobileWeb ? window.innerWidth * dpr : 800, this.mobileWeb ? window.innerHeight * dpr : 600, dpr);
 };
 
 
@@ -77,6 +78,7 @@ Boot = (function() {
 
   Boot.prototype.init = function() {
     if (!this.game.device.desktop) {
+      console.log('mobile device');
       this.game.scale.setMinMax(480, 260, 1024, 768);
       this.game.scale.forceLandscape = true;
       return this.game.scale.pageAlignHorizontally = true;
@@ -135,7 +137,7 @@ Main = (function() {
 
   Main.prototype.create = function() {
     var i, indexes, k, l, m, ref, ref1, ref2, results, results1, spScale;
-    spScale = (this.game.width / this.game.voucherInfo.size < 4 ? 1 : this.game.width / 1000);
+    spScale = ((this.game.width / 3) / this.game.voucherInfo.size) / 1.1;
     distX = [2 / 3, 4 / 3, 1 / 3, 1, 5 / 3];
     distY = [2 / 3, 2 / 3, 4 / 3, 4 / 3, 4 / 3];
     this.voucher = [];

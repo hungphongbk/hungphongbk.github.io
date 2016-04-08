@@ -19,7 +19,7 @@ class Main
 
   create : ->
 
-    spScale = (if @game.width/@game.voucherInfo.size < 4 then 1 else @game.width/1000)
+    spScale = ((@game.width/3)/@game.voucherInfo.size)/1.1;
     distX = [2/3, 4/3, 1/3, 1, 5/3]
     distY = [2/3, 2/3, 4/3, 4/3, 4/3]
 
