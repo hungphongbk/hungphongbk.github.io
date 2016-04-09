@@ -16,7 +16,13 @@ class Preload
 
   create: ->
 
-    @game.state.start 'main'
+    if @game.fb.isConnected
+      @game.state.start 'main'
+    else
+      console.log 'wait for connecting to Facebook...'
+      @game.fb.events.connected = =>
+        @game.state.start 'main'
+        return
 
 
 module.exports = Preload

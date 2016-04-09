@@ -11,10 +11,12 @@
     ]
   },
   "browser": {
-    "phaser": "./app/lib/phaser-official/build/phaser.min.js"
+    "phaser": "./app/lib/phaser-official/build/phaser.min.js",
+    "jquery": "./app/lib/jquery/dist/jquery.min.js"
   },
   "browserify-shim": {
-    "phaser": "Phaser"
+    "phaser": "Phaser",
+    "jquery": "$"
   },
   "dependencies": {},
   "devDependencies": {

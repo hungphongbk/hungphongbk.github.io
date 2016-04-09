@@ -3,10 +3,14 @@ Boot    = require './states/boot'
 Preload = require './states/preload'
 Main    = require './states/main'
 
+Facebook= new (require './facebook')('662347747238324')
+
 class Game extends Phaser.Game
 
   constructor : (width, height, @dpr)->
     super width, height, Phaser.AUTO, 'game-content', null, true
+
+    @fb = Facebook
 
     @state.add 'boot', Boot
     @state.add 'preload', Preload

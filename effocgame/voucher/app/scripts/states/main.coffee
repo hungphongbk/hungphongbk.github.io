@@ -18,7 +18,6 @@ class Main
   number_of_vouchers = 5
 
   create : ->
-
     spScale = ((@game.width/3)/@game.voucherInfo.size)/1.1;
     distX = [2/3, 4/3, 1/3, 1, 5/3]
     distY = [2/3, 2/3, 4/3, 4/3, 4/3]
