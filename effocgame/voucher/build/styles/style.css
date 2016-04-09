@@ -11,6 +11,11 @@ html, body {
   overflow: hidden;
 }
 
+#game-content {
+  background-image: url(../assets/backgrounds/bg.jpg);
+  background-size: cover;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
   #game-content {
     margin: 0;

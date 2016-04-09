@@ -51,7 +51,7 @@ Game = (function(superClass) {
 
   function Game(width, height, dpr1) {
     this.dpr = dpr1;
-    Game.__super__.constructor.call(this, width, height, Phaser.AUTO, 'game-content');
+    Game.__super__.constructor.call(this, width, height, Phaser.AUTO, 'game-content', null, true);
     this.state.add('boot', Boot);
     this.state.add('preload', Preload);
     this.state.add('main', Main);
@@ -90,7 +90,6 @@ Boot = (function() {
   };
 
   Boot.prototype.create = function() {
-    this.game.stage.backgroundColor = 0x00241E;
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     return this.game.state.start('preload');
   };

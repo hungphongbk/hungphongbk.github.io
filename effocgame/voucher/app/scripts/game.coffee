@@ -6,7 +6,7 @@ Main    = require './states/main'
 class Game extends Phaser.Game
 
   constructor : (width, height, @dpr)->
-    super width, height, Phaser.AUTO, 'game-content'
+    super width, height, Phaser.AUTO, 'game-content', null, true
 
     @state.add 'boot', Boot
     @state.add 'preload', Preload
