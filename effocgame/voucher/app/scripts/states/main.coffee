@@ -75,8 +75,8 @@ class Main
 
     for i in indexes
       tweens[i] = @game.add.tween @voucher[i].scale
-      tweens[i].to {x: initScale*splashZoom, y: initScale*splashZoom}, 150, Phaser.Easing.Quadratic.In
-      .to {x: initScale, y: initScale}, 150, Phaser.Easing.Quadratic.Out
+      tweens[i].to {x: initScale*splashZoom, y: initScale*splashZoom}, 100, Phaser.Easing.Quadratic.In
+      .to {x: initScale, y: initScale}, 100, Phaser.Easing.Quadratic.Out
 
       last_tween.chain(tweens[i]) if last_tween?
       last_tween = tweens[i]
@@ -142,6 +142,17 @@ class Main
       if @voucher[i]!=sprite
         @game.add.tween @voucher[i]
           .to {alpha: 0.3}, 200, Phaser.Easing.Linear.None
+          .start()
+      else
+        @game.world.bringToTop @voucher[i]
+        originScale = @voucher[i].scale.x
+        @game.add.tween @voucher[i].scale
+          .to {x: originScale*1.5, y: originScale*1.5}, 300, Phaser.Easing.Quadratic.In
+          .delay 300
+          .start()
+        @game.add.tween @voucher[i]
+          .to {x: @game.world.centerX, y: @game.world.centerY}, 300, Phaser.Easing.Quadratic.In
+          .delay 300
           .start()
 
   whenClickToVoucher: (sprite)->

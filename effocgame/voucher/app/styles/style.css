@@ -14,6 +14,14 @@ html, body {
 #game-content {
   background-image: url(../assets/backgrounds/bg.jpg);
   background-size: cover;
+  position: relative;
+}
+#game-content h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: black 0 0 10px;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {

@@ -221,10 +221,10 @@ Main = (function() {
       tweens[i].to({
         x: initScale * splashZoom,
         y: initScale * splashZoom
-      }, 150, Phaser.Easing.Quadratic.In).to({
+      }, 100, Phaser.Easing.Quadratic.In).to({
         x: initScale,
         y: initScale
-      }, 150, Phaser.Easing.Quadratic.Out);
+      }, 100, Phaser.Easing.Quadratic.Out);
       if (last_tween != null) {
         last_tween.chain(tweens[i]);
       }
@@ -321,7 +321,7 @@ Main = (function() {
   };
 
   Main.prototype.disableClickAndShowVoucher = function(sprite) {
-    var i, k, ref, results;
+    var i, k, originScale, ref, results;
     results = [];
     for (i = k = 0, ref = number_of_vouchers - 1; 0 <= ref ? k <= ref : k >= ref; i = 0 <= ref ? ++k : --k) {
       this.voucher[i].inputEnabled = false;
@@ -331,7 +331,16 @@ Main = (function() {
           alpha: 0.3
         }, 200, Phaser.Easing.Linear.None).start());
       } else {
-        results.push(void 0);
+        this.game.world.bringToTop(this.voucher[i]);
+        originScale = this.voucher[i].scale.x;
+        this.game.add.tween(this.voucher[i].scale).to({
+          x: originScale * 1.5,
+          y: originScale * 1.5
+        }, 300, Phaser.Easing.Quadratic.In).delay(300).start();
+        results.push(this.game.add.tween(this.voucher[i]).to({
+          x: this.game.world.centerX,
+          y: this.game.world.centerY
+        }, 300, Phaser.Easing.Quadratic.In).delay(300).start());
       }
     }
     return results;
