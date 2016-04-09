@@ -38,6 +38,7 @@ class FacebookApi
     api '/me',{ fields: 'name' },(response)=>
       @userInfo.id = response.id
       @userInfo.name = response.name
+      @isConnected = true
       callback() if callback?
 
 #      $.ajax

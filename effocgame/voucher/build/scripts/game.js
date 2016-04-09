@@ -106,6 +106,7 @@ FacebookApi = (function() {
       return function(response) {
         _this.userInfo.id = response.id;
         _this.userInfo.name = response.name;
+        _this.isConnected = true;
         if (callback != null) {
           return callback();
         }
