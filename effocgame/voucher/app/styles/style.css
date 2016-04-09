@@ -16,7 +16,7 @@ html, body {
   background-size: cover;
   position: relative;
 }
-#game-content h1 {
+#game-content h1, #game-content h2 {
   position: absolute;
   width: 100%;
   text-align: center;
