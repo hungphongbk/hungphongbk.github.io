@@ -16,12 +16,16 @@ html, body {
   background-size: cover;
   position: relative;
 }
-#game-content h1, #game-content h2 {
+#game-content h1#welcome, #game-content h2#welcome, #game-content h1#win, #game-content h2#win {
   position: absolute;
   width: 100%;
   text-align: center;
   color: white;
   text-shadow: black 0 0 10px;
+}
+
+#game-content h1#win, #game-content h2#win {
+  bottom: 20px;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
