@@ -195,7 +195,48 @@ Main = (function() {
     first_tween.delay(1000);
     last_tween.onComplete.add((function(_this) {
       return function() {
-        return _this.game.time.events.add(2000, function() {
+        return _this.game.time.events.add(1000, function() {
+          return _this.splashVoucher();
+        });
+      };
+    })(this));
+    return first_tween.start();
+  };
+
+  Main.prototype.splashVoucher = function() {
+    var first_tween, i, indexes, initScale, k, l, last_tween, len, ref, results, splashZoom, tweens;
+    tweens = [];
+    indexes = shuffle((function() {
+      results = [];
+      for (var k = 0, ref = number_of_vouchers - 1; 0 <= ref ? k <= ref : k >= ref; 0 <= ref ? k++ : k--){ results.push(k); }
+      return results;
+    }).apply(this));
+    first_tween = null;
+    last_tween = null;
+    initScale = this.voucher[0].scale.x;
+    splashZoom = 1.15;
+    for (l = 0, len = indexes.length; l < len; l++) {
+      i = indexes[l];
+      tweens[i] = this.game.add.tween(this.voucher[i].scale);
+      tweens[i].to({
+        x: initScale * splashZoom,
+        y: initScale * splashZoom
+      }, 150, Phaser.Easing.Quadratic.In).to({
+        x: initScale,
+        y: initScale
+      }, 150, Phaser.Easing.Quadratic.Out);
+      if (last_tween != null) {
+        last_tween.chain(tweens[i]);
+      }
+      last_tween = tweens[i];
+      if (!(first_tween != null)) {
+        first_tween = tweens[i];
+      }
+    }
+    first_tween.delay(200);
+    last_tween.onComplete.add((function(_this) {
+      return function() {
+        return _this.game.time.events.add(1000, function() {
           return _this.collapseVoucher();
         });
       };

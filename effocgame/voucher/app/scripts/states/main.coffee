@@ -59,7 +59,31 @@ class Main
       first_tween = tweens[i] if !(first_tween?)
     first_tween.delay 1000
     last_tween.onComplete.add =>
-      @game.time.events.add 2000, =>
+      @game.time.events.add 1000, =>
+        # @collapseVoucher()
+        @splashVoucher()
+    first_tween.start()
+
+  splashVoucher: ->
+    tweens = []
+    indexes = shuffle([0..number_of_vouchers-1])
+    first_tween = null
+    last_tween = null
+
+    initScale = @voucher[0].scale.x
+    splashZoom = 1.15;
+
+    for i in indexes
+      tweens[i] = @game.add.tween @voucher[i].scale
+      tweens[i].to {x: initScale*splashZoom, y: initScale*splashZoom}, 150, Phaser.Easing.Quadratic.In
+      .to {x: initScale, y: initScale}, 150, Phaser.Easing.Quadratic.Out
+
+      last_tween.chain(tweens[i]) if last_tween?
+      last_tween = tweens[i]
+      first_tween = tweens[i] if !(first_tween?)
+    first_tween.delay 200
+    last_tween.onComplete.add =>
+      @game.time.events.add 1000, =>
         @collapseVoucher()
     first_tween.start()
 
