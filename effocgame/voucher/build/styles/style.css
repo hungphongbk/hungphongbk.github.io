@@ -47,7 +47,7 @@ html, body {
 
 @media only screen and (min-device-width: 1024px) {
   h2#welcome {
-    font-size: 125%;
+    font-size: 2em;
   }
   #game-content {
 
