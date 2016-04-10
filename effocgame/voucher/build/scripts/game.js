@@ -53,7 +53,7 @@ var $, FacebookApi,
 $ = require('jquery');
 
 FacebookApi = (function() {
-  var accessToken, api, appId, getUserInfo, ui;
+  var accessToken, api, appId, getUserInfo, getUserInfoFromServer, ui;
 
   ui = null;
 
@@ -104,14 +104,49 @@ FacebookApi = (function() {
       fields: 'name'
     }, (function(_this) {
       return function(response) {
-        _this.userInfo.id = response.id;
         _this.userInfo.name = response.name;
-        _this.isConnected = true;
-        if (callback != null) {
-          return callback();
-        }
+        return $.ajax({
+          type: 'POST',
+          url: 'index.php/u',
+          data: "id=" + response.id + "&name=" + (encodeURIComponent(response.name)),
+          success: function(response) {
+            var o;
+            _this.isConnected = true;
+            o = JSON.parse(response);
+            console.log(o);
+            _this.userInfo.phonenumber = o['phonenumber'];
+            console.log("UserInfo status : done");
+            if (callback != null) {
+              return callback();
+            }
+          }
+        });
       };
     })(this));
+  };
+
+  getUserInfoFromServer = function(api, userId, success) {
+    this.userInfo.id = userId;
+    return $.ajax({
+      type: 'GET',
+      url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/" + userId,
+      success: (function(_this) {
+        return function(response) {
+          if (response['status'] === 'OK') {
+            _this.isConnected = true;
+            console.log('Data get from heroku: succeeded');
+            _this.userInfo.name = response['name'];
+            if (success()) {
+              return success();
+            }
+          } else {
+            console.log('Data get from heroku: failed');
+            console.log('call FB api');
+            return getUserInfo.call(_this, api, success);
+          }
+        };
+      })(this)
+    });
   };
 
   FacebookApi.prototype.initFb = function() {
@@ -129,7 +164,7 @@ FacebookApi = (function() {
         if (response.status === 'connected') {
           ui = FB.ui;
           api = FB.api;
-          return getUserInfo.call(_this, FB.api, function() {
+          return getUserInfoFromServer.call(_this, response.authResponse.userID, FB.api, function() {
             if (connectedCallback != null) {
               return connectedCallback();
             }

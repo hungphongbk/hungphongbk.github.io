@@ -58,9 +58,10 @@ class FacebookApi
       url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/#{userId}"
       success: (response)=>
         if response['status']=='OK'
+          @isConnected = true
           console.log 'Data get from heroku: succeeded'
           @userInfo.name = response['name']
-          success()
+          success() if success()
         else
           console.log 'Data get from heroku: failed'
           console.log 'call FB api'
