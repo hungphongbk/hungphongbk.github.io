@@ -99,22 +99,19 @@ FacebookApi = (function() {
     })(document, 'script', 'facebook-jssdk');
   };
 
-  getUserInfo = function(api, callback) {
+  getUserInfo = function(api, userId, callback) {
     return api('/me', {
       fields: 'name'
     }, (function(_this) {
       return function(response) {
         _this.userInfo.name = response.name;
+        $('span#name').text(_this.userInfo.name);
         return $.ajax({
           type: 'POST',
-          url: 'index.php/u',
-          data: "id=" + response.id + "&name=" + (encodeURIComponent(response.name)),
+          url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/" + userId,
+          data: "name=" + (encodeURIComponent(response.name)),
           success: function(response) {
-            var o;
             _this.isConnected = true;
-            o = JSON.parse(response);
-            console.log(o);
-            _this.userInfo.phonenumber = o['phonenumber'];
             console.log("UserInfo status : done");
             if (callback != null) {
               return callback();
@@ -136,13 +133,14 @@ FacebookApi = (function() {
             _this.isConnected = true;
             console.log('Data get from heroku: succeeded');
             _this.userInfo.name = response['name'];
-            if (success()) {
+            $('span#name').text(_this.userInfo.name);
+            if (success != null) {
               return success();
             }
           } else {
             console.log('Data get from heroku: failed');
             console.log('call FB api');
-            return getUserInfo.call(_this, api, success);
+            return getUserInfo.call(_this, api, userId, success);
           }
         };
       })(this)
@@ -164,7 +162,7 @@ FacebookApi = (function() {
         if (response.status === 'connected') {
           ui = FB.ui;
           api = FB.api;
-          return getUserInfoFromServer.call(_this, response.authResponse.userID, FB.api, function() {
+          return getUserInfoFromServer.call(_this, FB.api, response.authResponse.userID, function() {
             if (connectedCallback != null) {
               return connectedCallback();
             }
@@ -266,9 +264,11 @@ module.exports = Boot;
 
 
 },{}],6:[function(require,module,exports){
-var Main, Phaser, distance, shuffle;
+var $, Main, Phaser, distance, shuffle;
 
 Phaser = require('phaser');
+
+$ = require('jquery');
 
 shuffle = function(arr) {
   var i, j, k, ref, ref1;
@@ -319,9 +319,28 @@ Main = (function() {
         for (var m = ref2 = this.game.voucherInfo.frames; ref2 <= 0 ? m <= 0 : m >= 0; ref2 <= 0 ? m++ : m--){ results1.push(m); }
         return results1;
       }).apply(this));
+      this.voucher[i].wonValue = indexes[i];
     }
     console.log(this.voucher[0].width, this.game.width);
-    return this.viewVoucher();
+    this.viewVoucher();
+    return this.getWonStatus().then((function(_this) {
+      return function(won) {
+        return _this.userWon = won === 'true';
+      };
+    })(this));
+  };
+
+  Main.prototype.getWonStatus = function() {
+    var d;
+    d = $.Deferred();
+    $.ajax({
+      type: 'GET',
+      url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/won/" + this.game.fb.userInfo.id,
+      success: function(response) {
+        return d.resolve(response.won);
+      }
+    });
+    return d.promise();
   };
 
   Main.prototype.viewVoucher = function() {
@@ -485,9 +504,25 @@ Main = (function() {
   };
 
   Main.prototype.disableClickAndShowVoucher = function(sprite) {
-    var i, k, originScale, ref, results;
+    var i, k, l, originScale, ref, ref1, ref2, results;
+    if (this.userWon) {
+      console.log('xui cho ban, ban da thang o lan truoc roi');
+    }
+    if (sprite.wonValue && !this.userWon) {
+      $.ajax({
+        type: 'POST',
+        url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/won/" + this.game.fb.userInfo.id
+      });
+    } else if (sprite.wonValue && this.userWon) {
+      for (i = k = 0, ref = number_of_vouchers - 1; 0 <= ref ? k <= ref : k >= ref; i = 0 <= ref ? ++k : --k) {
+        if (this.voucher[i].wonValue === 0 && (this.voucher[i] !== sprite)) {
+          ref1 = [sprite, this.voucher[i]], this.voucher[i] = ref1[0], sprite = ref1[1];
+          break;
+        }
+      }
+    }
     results = [];
-    for (i = k = 0, ref = number_of_vouchers - 1; 0 <= ref ? k <= ref : k >= ref; i = 0 <= ref ? ++k : --k) {
+    for (i = l = 0, ref2 = number_of_vouchers - 1; 0 <= ref2 ? l <= ref2 : l >= ref2; i = 0 <= ref2 ? ++l : --l) {
       this.voucher[i].inputEnabled = false;
       this.voucher[i].input.useHandCursor = false;
       if (this.voucher[i] !== sprite) {
@@ -495,6 +530,10 @@ Main = (function() {
           alpha: 0.3
         }, 200, Phaser.Easing.Linear.None).start());
       } else {
+        sprite.play('spin');
+        if (this.voucher[i].wonValue === 1) {
+          $('#win').show(200);
+        }
         this.game.world.bringToTop(this.voucher[i]);
         originScale = this.voucher[i].scale.x;
         this.game.add.tween(this.voucher[i].scale).to({
@@ -511,7 +550,6 @@ Main = (function() {
   };
 
   Main.prototype.whenClickToVoucher = function(sprite) {
-    sprite.play('spin');
     return this.disableClickAndShowVoucher(sprite);
   };
 
@@ -522,7 +560,7 @@ Main = (function() {
 module.exports = Main;
 
 
-},{"phaser":2}],7:[function(require,module,exports){
+},{"jquery":1,"phaser":2}],7:[function(require,module,exports){
 var Preload;
 
 Preload = (function() {

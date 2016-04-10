@@ -34,20 +34,17 @@ class FacebookApi
       ref.parentNode.insertBefore js, ref
     )(document, 'script', 'facebook-jssdk')
 
-  getUserInfo = (api, callback)->
+  getUserInfo = (api, userId, callback)->
     api '/me',{ fields: 'name' },(response)=>
       @userInfo.name = response.name
+      $('span#name').text @userInfo.name
 
       $.ajax
         type: 'POST'
-        url: 'index.php/u'
-        data: "id=#{response.id}&name=#{encodeURIComponent response.name}"
+        url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/#{userId}"
+        data: "name=#{encodeURIComponent response.name}"
         success: (response)=>
           @isConnected = true
-
-          o = JSON.parse response
-          console.log o
-          @userInfo.phonenumber = o['phonenumber']
           console.log "UserInfo status : done"
           callback() if callback?
 
@@ -61,11 +58,12 @@ class FacebookApi
           @isConnected = true
           console.log 'Data get from heroku: succeeded'
           @userInfo.name = response['name']
-          success() if success()
+          $('span#name').text @userInfo.name
+          success() if success?
         else
           console.log 'Data get from heroku: failed'
           console.log 'call FB api'
-          getUserInfo.call @, api, success
+          getUserInfo.call @, api, userId, success
 
   initFb: =>
     fbConfig =
@@ -80,7 +78,7 @@ class FacebookApi
         ui = FB.ui
         api = FB.api
 
-        getUserInfoFromServer.call @, response.authResponse.userID, FB.api, ()->
+        getUserInfoFromServer.call @, FB.api, response.authResponse.userID, ()->
           connectedCallback() if connectedCallback?
 
     FB.getLoginStatus (response)->

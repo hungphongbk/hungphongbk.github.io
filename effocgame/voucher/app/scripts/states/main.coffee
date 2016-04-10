@@ -1,4 +1,5 @@
 Phaser  = require 'phaser'
+$ = require 'jquery'
 
 shuffle = (arr) ->
   for i in [arr.length-1..1]
@@ -30,9 +31,23 @@ class Main
       @voucher[i].scale.set spScale
       @voucher[i].animations.add 'spin', [0..@game.voucherInfo.frames]
       @voucher[i].animations.add 'spin-reverse', [@game.voucherInfo.frames..0]
+      @voucher[i].wonValue = indexes[i]
 
     console.log @voucher[0].width, @game.width
     @viewVoucher()
+    @getWonStatus().then (won)=>
+      @userWon = (won == 'true')
+
+
+  getWonStatus: ->
+    d = $.Deferred()
+    $.ajax
+      type: 'GET'
+      url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/won/#{@game.fb.userInfo.id}"
+      success: (response)->
+        d.resolve response.won
+
+    d.promise()
 
   viewVoucher: ->
     tweens = []
@@ -135,6 +150,18 @@ class Main
       @voucher[i].events.onInputDown.add @whenClickToVoucher, @
 
   disableClickAndShowVoucher: (sprite)->
+    if @userWon
+      console.log 'xui cho ban, ban da thang o lan truoc roi'
+    if sprite.wonValue and !@userWon
+      $.ajax
+        type: 'POST'
+        url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/won/#{@game.fb.userInfo.id}"
+    else if sprite.wonValue and @userWon
+      for i in [0..number_of_vouchers-1]
+        if @voucher[i].wonValue==0 and (@voucher[i]!=sprite)
+          [@voucher[i], sprite] = [sprite, @voucher[i]]
+          break
+
     for i in [0..number_of_vouchers-1]
       @voucher[i].inputEnabled = false
       @voucher[i].input.useHandCursor = false
@@ -143,6 +170,9 @@ class Main
           .to {alpha: 0.3}, 200, Phaser.Easing.Linear.None
           .start()
       else
+        sprite.play 'spin'
+        if @voucher[i].wonValue == 1
+          $('#win').show 200
         @game.world.bringToTop @voucher[i]
         originScale = @voucher[i].scale.x
         @game.add.tween @voucher[i].scale
@@ -155,7 +185,6 @@ class Main
           .start()
 
   whenClickToVoucher: (sprite)->
-    sprite.play 'spin'
     @disableClickAndShowVoucher sprite
 
 
