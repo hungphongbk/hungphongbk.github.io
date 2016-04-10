@@ -36,23 +36,35 @@ class FacebookApi
 
   getUserInfo = (api, callback)->
     api '/me',{ fields: 'name' },(response)=>
-      @userInfo.id = response.id
       @userInfo.name = response.name
-      @isConnected = true
-      callback() if callback?
 
-#      $.ajax
-#        type: 'POST'
-#        url: 'index.php/u'
-#        data: "id=#{response.id}&name=#{encodeURIComponent response.name}"
-#        success: (response)=>
-#          @isConnected = true
-#
-#          o = JSON.parse response
-#          console.log o
-#          @userInfo.phonenumber = o['phonenumber']
-#          console.log "UserInfo status : done"
-#          callback() if callback?
+      $.ajax
+        type: 'POST'
+        url: 'index.php/u'
+        data: "id=#{response.id}&name=#{encodeURIComponent response.name}"
+        success: (response)=>
+          @isConnected = true
+
+          o = JSON.parse response
+          console.log o
+          @userInfo.phonenumber = o['phonenumber']
+          console.log "UserInfo status : done"
+          callback() if callback?
+
+  getUserInfoFromServer = (api, userId, success)->
+    @userInfo.id = userId
+    $.ajax
+      type: 'GET'
+      url: "https://hungphongbk.herokuapp.com/game/effoc-voucher-0/public/user/#{userId}"
+      success: (response)=>
+        if response['status']=='OK'
+          console.log 'Data get from heroku: succeeded'
+          @userInfo.name = response['name']
+          success()
+        else
+          console.log 'Data get from heroku: failed'
+          console.log 'call FB api'
+          getUserInfo.call @, api, success
 
   initFb: =>
     fbConfig =
@@ -66,7 +78,8 @@ class FacebookApi
       if (response.status == 'connected')
         ui = FB.ui
         api = FB.api
-        getUserInfo.call @, FB.api, ()->
+
+        getUserInfoFromServer.call @, response.authResponse.userID, FB.api, ()->
           connectedCallback() if connectedCallback?
 
     FB.getLoginStatus (response)->
