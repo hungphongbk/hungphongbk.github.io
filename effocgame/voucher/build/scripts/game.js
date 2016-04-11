@@ -480,7 +480,7 @@ Main = (function() {
       tweens[i].to({
         x: distX[i] * this.game.world.centerX,
         y: distY[i] * this.game.world.centerY
-      }, 300, Phaser.Easing.Bounce.Out);
+      }, 100, Phaser.Easing.Bounce.Out);
       if (i > 0) {
         tweens[i - 1].chain(tweens[i]);
       }

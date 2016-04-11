@@ -15,7 +15,7 @@ html, body {
 }
 
 #game-content {
-  background-image: url(../assets/backgrounds/bg.jpg);
+  background-image: url(../assets/backgrounds/bg.png);
   background-size: cover;
   position: relative;
 }

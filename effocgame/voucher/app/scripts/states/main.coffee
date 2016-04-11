@@ -138,7 +138,7 @@ class Main
     tweens = []
     for i in [0..number_of_vouchers-1]
       tweens[i] = @game.add.tween @voucher[i]
-      tweens[i].to {x: distX[i] * @game.world.centerX, y: distY[i] * @game.world.centerY}, 300, Phaser.Easing.Bounce.Out
+      tweens[i].to {x: distX[i] * @game.world.centerX, y: distY[i] * @game.world.centerY}, 100, Phaser.Easing.Bounce.Out
       tweens[i - 1].chain(tweens[i]) if i > 0
     tweens[4].onComplete.add =>
       @allowClickToVouchers()
