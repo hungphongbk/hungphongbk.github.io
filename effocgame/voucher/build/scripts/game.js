@@ -533,7 +533,7 @@ Main = (function() {
       } else {
         sprite.play('spin');
         if (this.voucher[i].wonValue === 1) {
-          $('#win').show(200);
+          $('#win').fade(500);
         }
         this.game.world.bringToTop(this.voucher[i]);
         originScale = this.voucher[i].scale.x;

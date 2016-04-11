@@ -173,7 +173,7 @@ class Main
       else
         sprite.play 'spin'
         if @voucher[i].wonValue == 1
-          $('#win').show 200
+          $('#win').fade 500
         @game.world.bringToTop @voucher[i]
         originScale = @voucher[i].scale.x
         @game.add.tween @voucher[i].scale
