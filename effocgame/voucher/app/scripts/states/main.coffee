@@ -17,6 +17,7 @@ class Main
   voucherSpeed = 40
   moveSpeed = 1
   number_of_vouchers = 5
+  spScale = 0
 
   create : ->
     spScale = ((@game.width/3)/@game.voucherInfo.size)/1.1;
@@ -172,10 +173,11 @@ class Main
           .start()
       else
         sprite.play 'spin'
-        if @voucher[i].wonValue == 1
-          $('#win').fade 500
         @game.world.bringToTop @voucher[i]
         originScale = @voucher[i].scale.x
+        originX = @voucher[i].x
+        originY = @voucher[i].y
+        console.log originX, originY
         @game.add.tween @voucher[i].scale
           .to {x: originScale*1.5, y: originScale*1.5}, 300, Phaser.Easing.Quadratic.In
           .delay 300
@@ -184,6 +186,26 @@ class Main
           .to {x: @game.world.centerX, y: @game.world.centerY}, 300, Phaser.Easing.Quadratic.In
           .delay 300
           .start()
+
+        @game.time.events.add 2000, (winVoucher, _originX, _originY)->
+          @collapseWinVoucherAndShow winVoucher, _originX, _originY
+        ,@,@voucher[i], originX, originY
+
+  collapseWinVoucherAndShow: (winVoucher, initX, initY)->
+    console.log initX, initY
+    @game.add.tween winVoucher.scale
+      .to {x: spScale, y: spScale}, 200, Phaser.Easing.Quadratic.In
+      .start()
+    @game.add.tween winVoucher
+      .to {alpha: 0.3}, 200, Phaser.Easing.Linear.None
+      .start()
+    tween = @game.add.tween winVoucher
+      .to {x: initX, y: initY}, 200, Phaser.Easing.Quadratic.In
+    tween.onComplete.add ->
+      winVoucher.play 'spin-reverse'
+      if winVoucher.wonValue == 1
+        $('#win').fadeIn 500
+    tween.start()
 
   whenClickToVoucher: (sprite)->
     @disableClickAndShowVoucher sprite

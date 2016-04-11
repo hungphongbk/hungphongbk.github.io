@@ -66,12 +66,12 @@ h2 small, h3 small {
   }
   #win {
     width: 600px;
-    height: 300px;
+    height: 400px;
 
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-300px, -150px);
-    -moz-transform: translate(-300px, -150px);
-    transform: translate(-300px, -150px);
+    -webkit-transform: translate(-300px, -200px);
+    -moz-transform: translate(-300px, -200px);
+    transform: translate(-300px, -200px);
   }
 }

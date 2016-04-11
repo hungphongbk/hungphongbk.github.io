@@ -284,7 +284,7 @@ distance = function(x1, y1, x2, y2) {
 };
 
 Main = (function() {
-  var distX, distY, moveSpeed, number_of_vouchers, voucherSpeed;
+  var distX, distY, moveSpeed, number_of_vouchers, spScale, voucherSpeed;
 
   function Main() {}
 
@@ -298,8 +298,10 @@ Main = (function() {
 
   number_of_vouchers = 5;
 
+  spScale = 0;
+
   Main.prototype.create = function() {
-    var distHeight, i, indexes, k, l, m, ref, ref1, ref2, results, results1, spScale;
+    var distHeight, i, indexes, k, l, m, ref, ref1, ref2, results, results1;
     spScale = ((this.game.width / 3) / this.game.voucherInfo.size) / 1.1;
     distX = [2 / 3, 4 / 3, 1 / 3, 1, 5 / 3];
     distHeight = 2 / 3 * 1.1;
@@ -505,7 +507,7 @@ Main = (function() {
   };
 
   Main.prototype.disableClickAndShowVoucher = function(sprite) {
-    var i, k, l, originScale, ref, ref1, ref2, results;
+    var i, k, l, originScale, originX, originY, ref, ref1, ref2, results;
     if (this.userWon) {
       console.log('xui cho ban, ban da thang o lan truoc roi');
     }
@@ -532,22 +534,48 @@ Main = (function() {
         }, 200, Phaser.Easing.Linear.None).start());
       } else {
         sprite.play('spin');
-        if (this.voucher[i].wonValue === 1) {
-          $('#win').fade(500);
-        }
         this.game.world.bringToTop(this.voucher[i]);
         originScale = this.voucher[i].scale.x;
+        originX = this.voucher[i].x;
+        originY = this.voucher[i].y;
+        console.log(originX, originY);
         this.game.add.tween(this.voucher[i].scale).to({
           x: originScale * 1.5,
           y: originScale * 1.5
         }, 300, Phaser.Easing.Quadratic.In).delay(300).start();
-        results.push(this.game.add.tween(this.voucher[i]).to({
+        this.game.add.tween(this.voucher[i]).to({
           x: this.game.world.centerX,
           y: this.game.world.centerY
-        }, 300, Phaser.Easing.Quadratic.In).delay(300).start());
+        }, 300, Phaser.Easing.Quadratic.In).delay(300).start();
+        results.push(this.game.time.events.add(2000, function(winVoucher, _originX, _originY) {
+          return this.collapseWinVoucherAndShow(winVoucher, _originX, _originY);
+        }, this, this.voucher[i], originX, originY));
       }
     }
     return results;
+  };
+
+  Main.prototype.collapseWinVoucherAndShow = function(winVoucher, initX, initY) {
+    var tween;
+    console.log(initX, initY);
+    this.game.add.tween(winVoucher.scale).to({
+      x: spScale,
+      y: spScale
+    }, 200, Phaser.Easing.Quadratic.In).start();
+    this.game.add.tween(winVoucher).to({
+      alpha: 0.3
+    }, 200, Phaser.Easing.Linear.None).start();
+    tween = this.game.add.tween(winVoucher).to({
+      x: initX,
+      y: initY
+    }, 200, Phaser.Easing.Quadratic.In);
+    tween.onComplete.add(function() {
+      winVoucher.play('spin-reverse');
+      if (winVoucher.wonValue === 1) {
+        return $('#win').fadeIn(500);
+      }
+    });
+    return tween.start();
   };
 
   Main.prototype.whenClickToVoucher = function(sprite) {
