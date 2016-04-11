@@ -299,10 +299,11 @@ Main = (function() {
   number_of_vouchers = 5;
 
   Main.prototype.create = function() {
-    var i, indexes, k, l, m, ref, ref1, ref2, results, results1, spScale;
+    var distHeight, i, indexes, k, l, m, ref, ref1, ref2, results, results1, spScale;
     spScale = ((this.game.width / 3) / this.game.voucherInfo.size) / 1.1;
     distX = [2 / 3, 4 / 3, 1 / 3, 1, 5 / 3];
-    distY = [2 / 3, 2 / 3, 4 / 3, 4 / 3, 4 / 3];
+    distHeight = 2 / 3 * 1.1;
+    distY = [distHeight, distHeight, 2 - distHeight, 2 - distHeight, 2 - distHeight];
     this.voucher = [];
     indexes = shuffle([0, 0, 0, 1, 1]);
     for (i = k = 0, ref = number_of_vouchers - 1; 0 <= ref ? k <= ref : k >= ref; i = 0 <= ref ? ++k : --k) {

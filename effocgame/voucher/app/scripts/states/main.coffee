@@ -21,7 +21,8 @@ class Main
   create : ->
     spScale = ((@game.width/3)/@game.voucherInfo.size)/1.1;
     distX = [2/3, 4/3, 1/3, 1, 5/3]
-    distY = [2/3, 2/3, 4/3, 4/3, 4/3]
+    distHeight = 2/3 * 1.1;
+    distY = [distHeight, distHeight, 2-distHeight, 2-distHeight, 2-distHeight]
 
     @voucher = []
     indexes = shuffle([0,0,0,1,1])
