@@ -225,10 +225,9 @@ Game = (function(superClass) {
 })(Phaser.Game);
 
 window.onload = function() {
-  var dpr, game;
+  var dpr;
   dpr = window.devicePixelRatio || 1;
-  this.mobileWeb = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(navigator.userAgent);
-  return game = new Game(this.mobileWeb ? window.innerWidth * dpr : 800, this.mobileWeb ? window.innerHeight * dpr : 600, dpr);
+  return this.mobileWeb = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(navigator.userAgent);
 };
 
 

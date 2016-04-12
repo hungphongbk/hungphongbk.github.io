@@ -23,7 +23,7 @@ window.onload = ->
 
   dpr = window.devicePixelRatio || 1
   @mobileWeb = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(navigator.userAgent)
-  game = new Game(
-    if @mobileWeb then window.innerWidth * dpr else 800,
-    if @mobileWeb then window.innerHeight * dpr else 600,
-    dpr)
+#  game = new Game(
+#    if @mobileWeb then window.innerWidth * dpr else 800,
+#    if @mobileWeb then window.innerHeight * dpr else 600,
+#    dpr)
