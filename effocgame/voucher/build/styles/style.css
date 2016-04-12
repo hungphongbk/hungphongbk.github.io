@@ -59,7 +59,7 @@ h2 small, h3 small {
 @media only screen and (min-device-width: 1024px) {
   #game-content {
     background-image: url(../assets/backgrounds/bg.png);
-    margin: 20px auto;
+    margin: 0 auto;
 
     width: 800px;
     height: 600px;
