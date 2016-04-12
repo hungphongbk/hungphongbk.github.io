@@ -35,6 +35,8 @@ h2 small, h3 small {
   padding: 20px;
 
   background-image: url(../assets/images/win.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   color: white;
 }
 #win h2 {
@@ -48,11 +50,15 @@ h2 small, h3 small {
     width: 100%;
     height: 100%;
   }
+  h2 {
+    font-size: 0.9em;
+  }
   #win {
-    top: 1em;
+    top: 10em;
     left: 1em;
     bottom: 1em;
     right: 1em;
+    padding-top: 10px;
   }
 }
 
