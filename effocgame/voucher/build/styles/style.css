@@ -58,7 +58,20 @@ h2 small, h3 small {
     left: 1em;
     bottom: 1em;
     right: 1em;
-    padding-top: 10px;
+    padding-top: 8px;
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  h2 {
+    font-size: 1.8em;
+  }
+  #win {
+    top: 10em;
+    left: 1em;
+    bottom: 1em;
+    right: 1em;
+    padding-top: 20px;
   }
 }
 
