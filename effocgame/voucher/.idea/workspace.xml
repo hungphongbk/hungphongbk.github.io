@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61eff11d-bb9b-40d7-97ec-0a9a1b3e96f3" name="Default" comment="facebook support">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/win.png" afterPath="$PROJECT_DIR$/app/assets/images/win.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/assets/images/win.png" afterPath="$PROJECT_DIR$/build/assets/images/win.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/style.css" afterPath="$PROJECT_DIR$/app/styles/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/styles/style.css" afterPath="$PROJECT_DIR$/build/styles/style.css" />
     </list>
     <ignored path="voucher.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -551,7 +551,7 @@
       <workItem from="1460362589233" duration="1798000" />
       <workItem from="1460366900690" duration="1463000" />
       <workItem from="1460394781515" duration="3126000" />
-      <workItem from="1460435209255" duration="2134000" />
+      <workItem from="1460435209255" duration="2457000" />
     </task>
     <task id="LOCAL-00001" summary="add effoc voucher game">
       <created>1459844038234</created>
@@ -784,11 +784,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460436868010</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="facebook support">
+      <created>1460437620404</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1460437620404</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41610000" />
+    <option name="totallyTimeSpent" value="41933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="23" width="1310" height="745" extended-state="6" />
