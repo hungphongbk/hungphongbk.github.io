@@ -1,0 +1,34 @@
+[
+  {
+    "prefix": "VC100",
+    "label": "Voucher 10k"
+  },
+  {
+    "prefix": "F1B00",
+    "label": "Free 1 bánh"
+  },
+  {
+    "prefix": "",
+    "label": ""
+  },
+  {
+    "prefix": "VC500",
+    "label": "Voucher 50k"
+  },
+  {
+    "prefix": "F1C00",
+    "label": "Free 1 coffee"
+  },
+  {
+    "prefix": "VCG00",
+    "label": "Voucher giảm giá 50%"
+  },
+  {
+    "prefix": "",
+    "label": ""
+  },
+  {
+    "prefix": "F1000",
+    "label": "Free 1 chocolate"
+  }
+]

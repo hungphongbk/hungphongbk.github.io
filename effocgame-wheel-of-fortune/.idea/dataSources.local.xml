@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - effoc02160@ulibi.cwvkylm2lmvh.ap-southeast-1.rds.amazonaws.com" uuid="b21d3d2c-3161-487e-b95a-5584957a55c4">
+      <secret-storage>master_key</secret-storage>
+      <user-name>hungphongbk</user-name>
+      <schema-pattern>effoc02160.*</schema-pattern>
+      <default-schemas>effoc02160.*</default-schemas>
+    </data-source>
+  </component>
+</project>

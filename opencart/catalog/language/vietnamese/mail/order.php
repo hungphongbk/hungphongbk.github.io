@@ -1,0 +1,35 @@
+<?php
+// Text
+$_['text_new_subject']          = '%s - Đặt hàng %s';
+$_['text_new_greeting']         = 'Cảm ơn bạn đã quan tâm sản phẩm %s . Đơn đặt hàng của bạn đã được ghi nhận và sẽ được xử lý khi mà thanh toán đã được xác nhận.';
+$_['text_new_received']         = 'Bạn sẽ nhận được một đơn đặt hàng.';
+$_['text_new_link']             = 'Để xem đơn đặt hàng thì bạn có thể nhấp vào link ở dưới';
+$_['text_new_order_detail']     = 'Chi tiết đơn đặt hàng';
+$_['text_new_instruction']      = 'Hướng dẫn';
+$_['text_new_order_id']         = 'ID đơn đặt hàng:';
+$_['text_new_date_added']       = 'Ngày thêm:';
+$_['text_new_order_status']     = 'Trạng thái đặt hàng:';
+$_['text_new_payment_method']   = 'Phương thức thanh toán:';
+$_['text_new_shipping_method']  = 'Phương thức giao hàng:';
+$_['text_new_email']  			= 'E-mail:';
+$_['text_new_telephone']  		= 'Điện thoại:';
+$_['text_new_ip']  				= 'Địa chỉ IP:';
+$_['text_new_payment_address']  = 'Địa chỉ thanh toán';
+$_['text_new_shipping_address'] = 'Địa chỉ giao hàng';
+$_['text_new_products']         = 'Sản phẩm';
+$_['text_new_product']          = 'Sản phẩm';
+$_['text_new_model']            = 'Kiểu';
+$_['text_new_quantity']         = 'Số lượng';
+$_['text_new_price']            = 'Giá';
+$_['text_new_order_total']      = 'Tổng đơn đặt hàng';
+$_['text_new_total']            = 'Tổng';
+$_['text_new_download']         = 'Khi thanh toán của bạn đã được xác nhận bạn có thể nhấp vào link phía dưới để truy cập your downloadable products:';
+$_['text_new_comment']          = 'Nhận xét đối với đơn đặt hàng của bạn:';
+$_['text_new_footer']           = 'Trả lời email này nếu bạn có bất kì câu hỏi nào.';
+$_['text_update_subject']       = '%s - Cập nhật đơn đặt hàng %s';
+$_['text_update_order']         = 'ID yêu cầu:';
+$_['text_update_date_added']    = 'Ngày đặt hàng:';
+$_['text_update_order_status']  = 'Đơn đặt hàng của bạn đã cập nhật từ trạng thái sau:';
+$_['text_update_comment']       = 'Nhận xét về đơn đặt hàng của bạn:';
+$_['text_update_link']          = 'Để xem đơn đặt hàng của bạn thì nhấp vào link dưới';
+$_['text_update_footer']        = 'Trả lời email này nếu bạn có bất kì câu hỏi nào';

@@ -1,0 +1,32 @@
+{
+  "name": "antlrjs",
+  "version": "1.0.0",
+  "homepage": "https://github.com/hungphongbk/hungphongbk.github.io",
+  "authors": [
+    "Trương Phong <programmingd32@gmail.com>"
+  ],
+  "description": "a BKOOL language compiler",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "bkool",
+    "antlr"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "angular": "angularjs#~1.4.7",
+    "font-awesome": "~4.4.0",
+    "angular-ui-router": "~0.2.15",
+    "underscore": "~1.8.3",
+    "requirejs": "~2.1.20"
+  }
+}
