@@ -21,3 +21,8 @@ npm install -g forever
 3. Vào Advanced Options, đảm bảo mục **Proxy support** được checked, thêm một account FTP để tiện cho việc config Ghost blog sau này.
 Sau khi thêm website thành công, kết quả sẽ là như thế này
 ![](http://i.imgur.com/sABg0pD.png)
+### Cài đặt Ghost blog
+Có hai lựa chọn: FTP hoặc SSH.
+#### FTP
+Đơn giản là tải bộ cài Ghost về tại [đây](https://ghost.org/zip/ghost-latest.zip), sau đó giải nén ra.
+Mở FileZilla lên, đăng nhập bằng account FTP bạn đã thêm khi tạo website (host: *<ip-server-của-bạn>*, port để trống), vào thư mục `public_html` và upload hết toàn bộ nội dung đã giải nén lên.
