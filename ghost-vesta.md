@@ -30,4 +30,56 @@ $ cd ~/web/<domain-blog-của-bạn>/public_html/
 $ curl -L https://ghost.org/zip/ghost-latest.zip -o ghost.zip
 $ unzip -uo ghost.zip
 $ npm install
+$ NODE_ENV=production forever start index.js
 ```
+Kiểm tra việc cài đặt ghost bằng cách `cd node_modules; ls`. Nếu thấy xuất hiện một loạt các package khác nhau nghĩa là mọi thứ đã ổn.
+#### config.js
+Cũng không cần sửa gì. Mặc định blog sẽ được serve trên localhost với URL `http://localhost:2368`. Việc còn lại của chúng ta là cấu hình lại NginX để reverse proxy đến URL này.
+#### NginX as reverse proxy
+Đăng nhập FTP với tài khoản root (host: ip-của-bạn, user: root, pass: pass-của-root, port: **22**). Di chuyển đến thư mục `/home/admin/conf/web` và edit file `nginx.conf` bằng cách click chuột phải vào file, chọn **View/Edit**
+
+Thay đổi nội dung file `nginx.conf` thành như sau, lưu ý việc thay **server IP** và **domain** thành serverIP/domain tương ứng của bạn.
+```nginx
+server {
+    listen      139.59.124.221:80;
+    server_name ghostdemo.hungphongbk.com www.ghostdemo.hungphongbk.com;
+    error_log  /var/log/httpd/domains/ghostdemo.hungphongbk.com.error.log error;
+
+    location / {
+        proxy_http_version  1.1;
+        proxy_set_header    X-Real-IP $remote_addr;
+        proxy_set_header    Host $host;
+        proxy_pass          http://127.0.0.1:2368;
+        proxy_redirect off;
+
+        location ~* ^.+\.(jpeg|jpg|png|gif|bmp|ico|svg|tif|tiff|css|js|htm|html|ttf|otf|webp|woff|txt|csv|rtf|doc|docx|xls|xlsx|ppt|pptx|odf|odp|ods|odt|pdf|psd|ai|eot|eps|ps|zip|tar|tgz|gz|rar|bz2|7z|aac|m4a|mp3|mp4|ogg|wav|wma|3gp|avi|flv|m4v|mkv|mov|mpeg|mpg|wmv|exe|iso|dmg|swf)$ {
+            root           /home/admin/web/ghostdemo.hungphongbk.com/public_html;
+            access_log     /var/log/httpd/domains/ghostdemo.hungphongbk.com.log combined;
+            access_log     /var/log/httpd/domains/ghostdemo.hungphongbk.com.bytes bytes;
+            expires        max;
+            try_files      $uri @fallback;
+            
+        }
+    }
+
+    location /error/ {
+        alias   /home/admin/web/ghostdemo.hungphongbk.com/document_errors/;
+    }
+
+    location @fallback {
+        proxy_pass      http://127.0.0.1:2368;
+    }
+
+    location ~ /\.ht    {return 404;}
+    location ~ /\.svn/  {return 404;}
+    location ~ /\.git/  {return 404;}
+    location ~ /\.hg/   {return 404;}
+    location ~ /\.bzr/  {return 404;}
+
+    disable_symlinks if_not_owner from=/home/admin/web/ghostdemo.hungphongbk.com/public_html;
+
+    include /home/admin/conf/web/nginx.ghostdemo.hungphongbk.com.conf*;
+}
+```
+
+Trở lại Vesta Control Panel. Truy cập vào **Server** (ở trên cùng) > nginx > restart. Thế là xong rồi nhé!
