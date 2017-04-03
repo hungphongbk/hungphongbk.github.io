@@ -8,11 +8,11 @@
 ### NodeJS & forever
 Chạy lệnh `node -v` để kiểm tra NodeJS đã được cài đặt lên server chưa. Nếu chưa, chạy lần lượt các lệnh dưới đây để cài đặt `nodejs` và `forever`
 ```bash
-yum -y install gcc-c++ make
-curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
-yum install -y nodejs
-yum update
-npm install -g forever
+$ yum -y install gcc-c++ make
+$ curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+$ yum install -y nodejs
+$ yum update
+$ npm install -g forever
 ```
 ### Tạo một website mới
 ![](http://i.imgur.com/CRrH0Oo.png)
@@ -22,7 +22,12 @@ npm install -g forever
 Sau khi thêm website thành công, kết quả sẽ là như thế này
 ![](http://i.imgur.com/sABg0pD.png)
 ### Cài đặt Ghost blog
-Có hai lựa chọn: FTP hoặc SSH.
-#### FTP
-Đơn giản là tải bộ cài Ghost về tại [đây](https://ghost.org/zip/ghost-latest.zip), sau đó giải nén ra.
-Mở FileZilla lên, đăng nhập bằng account FTP bạn đã thêm khi tạo website (host: *<ip-server-của-bạn>*, port để trống), vào thư mục `public_html` và upload hết toàn bộ nội dung đã giải nén lên.
+#### SSH
+Giả sử account bạn dùng đăng nhập **Vesta CP** là admin
+```bash
+$ su admin
+$ cd ~/web/<domain-blog-của-bạn>/public_html/
+$ curl -L https://ghost.org/zip/ghost-latest.zip -o ghost.zip
+$ unzip -uo ghost.zip
+$ npm install
+```
